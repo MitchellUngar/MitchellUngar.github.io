@@ -2,39 +2,23 @@
 <!--
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
-DATE: October 16 2015
-VERSION: 1.0.1
-This program uses "WebRTC" through javascript to connect two computers (One on
-localhost BUDO PORT : 9966) and allow to locations to see eachother through
+DATE: October 30 2015
+VERSION: 1.0.2
+This program uses "WebRTC" through javascript to connect two computers
+through git pages and pudhub and allow two locations to see eachother through
 webcam, and to see the birthdays and anniversary's of fellow employee's. It
-Also shows the time and date, and will soon allow the weather.
-package.JSON File
-{
-  "name": "buzzboarddemo",
-  "version": "0.1.0",
-  "description": "Demo for buzzboard",
-  "main": "index.js",
-  "scripts": {
-    "start": "budo index.js:bundle.js"
-  },
-  "author": "mitchell.ungar@bbd.ca",
-  "license": "MIT",
-  "devDependencies": {
-    "budo": "^5.1.3",
-    "watchify": "^3.4.0"
-  },
-  "dependencies": {
-    "simple-peer": "^5.11.5"
-  }
-}
-The "start" : "budo index.js:bundle.js" command lets you run "npm start" in the
-command console to run the budo server. It isn't needed but helps out a lot.
+Also shows the time and date.
+
+How to run.
+After pushing to the git repo type in
+http://mitchellungar.github.io
+NOTE:
+it is not HTTPS it is HTTP.
+Reason is that the security stops the camera stream.
 TODO
 1. See what Graphics are needed, Meeting today will show that information.
-2. Look into Javascript weather app or HTML weather app to see if it is possible.
-3. Find out if the Webcam can be used on servers other the BUDO.
-4. Find a color scheme that works with BBD and stick with it(Meeting)
-5. Add more content and see what is needed to be done.
+2. Find a color scheme that works with BBD and stick with it(Meeting)
+3. Add more content and see what is needed to be done.
 FIRST MEETING INFORMATION:
 1. No longer needing the weather app.
 2. Get rid of bottom bar.
@@ -47,11 +31,11 @@ FIRST MEETING INFORMATION:
 7. Change logo to better quality Logo
 8. Maybe get better looking title.
 9. Make the text opacity to 100% but the div 60%.
-10.
 Resources:
 script.js
 index.js
-package.JSON
+index.HTML
+style.css
 BBD LOGO Pictures
 Background Picture
 -->
@@ -89,15 +73,12 @@ Background Picture
         </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
         <div id="mid-container">
+          <!--Video Div for new video to be created in-->
           <div id="vid-box"></div>
-
-
-          <script type="text/javascript">
-          </script>
-
         </div>
 <!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
         <div id="right-container">
+          <!--INSTRUCTIONS FOR TESTING-->
           <h1>A container that does stuff!</h1>
           <h2>How to Test!</h2>
           <p>1.Type Name into Username box</p>
@@ -106,10 +87,12 @@ Background Picture
           <p> 4.Type in opposite tabs username in call box</p>
           <p>5.Push Call button</p>
           <p>6.Press F11 to enlarge and unenlarge screen</p>
+          <!--Login button and text box-->
           <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
               <input type="text" name="username" id="username" placeholder="Pick a username!" />
               <input type="submit" name="login_submit" value="Log In">
           </form>
+          <!--Call button and text box-->
           <form name="callForm" id="call" action="#" onsubmit="return makeCall(this);">
               <input type="text" name="number" placeholder="Enter user to dial!" />
               <input type="submit" value="Call"/>
@@ -123,16 +106,20 @@ Background Picture
       <div id="bottom-container">
 
       </div>
-<!--iiiiiiiiiiiiiiiiiiiiii END iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+
     </body>
+<!--iiiiiiiiiiiiiiiiiiiiii Javascript for WEB RTC iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <script type="text/javascript">
+    /*Creates new video object in vid-box container*/
     var video_out = document.getElementById("vid-box");
+    /*Using pubnub to grab the publish key and the subscribe key*/
     function login(form) {
         var phone = window.phone = PHONE({
             number        : form.username.value || "Anonymous", // listen on username line else Anonymous
             publish_key   : 'pub-c-c0eba782-00c1-497f-afa4-d766b32d66af',
             subscribe_key : 'sub-c-cf519308-79b5-11e5-9720-0619f8945a4f',
         });
+    /*If the connection works with the login text box goes green*/
         phone.ready(function(){ form.username.style.background="#55ff5b"; });
         phone.receive(function(session){
             session.connected(function(session) { video_out.appendChild(session.video); });
@@ -140,10 +127,12 @@ Background Picture
         });
         return false;   // So the form does not submit.
     }
+    /*Making a new call, if you are not logged in it will warn you*/
     function makeCall(form){
         if (!window.phone) alert("Login First!");
         else phone.dial(form.number.value);
         return false;
     }
     </script>
+<!--iiiiiiiiiiiiiiiiiiiiii END iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
 </html>
