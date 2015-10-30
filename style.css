@@ -1,0 +1,83 @@
+/*CSS Body*/
+#body {
+  background: url("Pictures/backgroundImage.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+/*CSS Middle Container*/
+#mid-container {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    margin: 0px auto;
+    width: 650px;
+    height: 450px;
+}
+/*CSS Main Container*/
+#main-container {
+    width: 1800px;
+    height: 675px;
+}
+/*CSS Top Container*/
+#top-container {
+    margin: 0px auto;
+    width: 1800px;
+    height: 200px;
+}
+/*CSS Bottom Container*/
+#bottom-container {
+  /*
+    margin: 0px auto;
+    width: 1800px;
+    height: 150px;
+    background: #CCC;
+    opacity:0.7;*/
+}
+/*CSS Left Container*/
+#left-container {
+    margin-left: 25px;
+    width: 550px;
+    height: 675px;
+    background: #CCC;
+    opacity:0.6;
+	  float: left;
+}
+/*CSS Right Container*/
+#right-container {
+    margin-right: 25px;
+   	margin-top: -450px;
+    width: 550px;
+    height: 675px;
+    background: #CCC;
+    opacity:0.6;
+	  float: right;
+}
+/*CSS Video Container(Around the Webcam video)*/
+#video-container {
+    border-style: solid;
+    border-width: thick;
+    /*Temporarily blue border(Take out before final run)*/
+    border-color: blue;
+    height: 400;
+    width: 500;
+}
+/*CSS Top Title ("Benefits By Design")*/
+#title {
+    margin-left: 25%;
+    margin-right:25%;
+}
+/*The field that holds the Date(Helped with script.js)*/
+#dtField {
+    float:right;
+    margin-right:150px;
+    margin-top:-100px;
+    font-size: 250%;
+    color: yellow;
+}
+/*The Field that shows the Time(Helped with script.js)*/
+#showTime {
+    float:right;
+    margin-right:150px;
+    margin-top:-50px;
+    font-size: 250%;
+    color: yellow;
+}
