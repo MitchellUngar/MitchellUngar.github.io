@@ -1,3 +1,8 @@
+/*TITLE: Digital Buzzboard
+AUTHOR: Mitchell Ungar
+DATE: October 30 2015
+VERSION: 1.0.2*/
+
 /*CSS Body*/
 #body {
   background: url("Pictures/blueBackground.jpg");
@@ -34,6 +39,7 @@
 }
 /*CSS Left Container*/
 #left-container {
+    border-radius: 25px;
     margin-left: 25px;
     width: 550px;
     height: 675px;
@@ -43,6 +49,7 @@
 }
 /*CSS Right Container*/
 #right-container {
+    border-radius: 25px;
     margin-right: 25px;
    	margin-top: -450px;
     width: 550px;
@@ -80,4 +87,20 @@
     margin-top:-50px;
     font-size: 250%;
     color: yellow;
+}
+#lrgTitle{
+  margin-left: 225px;
+  text-decoration: underline;
+}
+.textarea{
+  width: 500px;
+  height: 100px;
+}
+.eventTitle{
+
+  margin-left: 35%;
+  text-decoration: underline;
+}
+.eventBox{
+  margin-left:2%;
 }

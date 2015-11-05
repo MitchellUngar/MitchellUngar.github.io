@@ -59,6 +59,7 @@ function showTheTime() {
     return " pm";
   }
 }
+
 /*End of show the time function*/
 
 /*Javascript isn't smart enough to have two window.onload functions being used

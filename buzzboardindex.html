@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!DIGITAL BUZZBOARD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+TITLE: Digital Buzzboard
+AUTHOR: Mitchell Ungar
+DATE: October 30 2015
+VERSION: 1.0.2
+This program uses "WebRTC" through javascript to connect two computers
+through git pages and pudhub and allow two locations to see eachother through
+webcam, and to see the birthdays and anniversary's of fellow employee's. It
+Also shows the time and date.
+
+How to run.
+After pushing to the git repo type in
+http://mitchellungar.github.io
+NOTE:
+it is not HTTPS it is HTTP.
+Reason is that the security stops the camera stream.
+NOTE:
+When it comes to connecting to other computers it runs better
+in firfox. With google chrome sometimes doesn't display camera
+but will produce audio.
+TODO
+1. See what Graphics are needed, Meeting today will show that information.
+2. Find a color scheme that works with BBD and stick with it(Meeting)
+3. Add more content and see what is needed to be done.
+
+NOTE:
+Resources:
+script.js
+index.js
+index.HTML
+style.css
+BBD LOGO Pictures
+Background Picture
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Benefits By Design Buzzboard</title>
+    <!--Lets you use jquery and avoid downloading NPM modules-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--Allows you to use pubnub resources such as .phone-->
+    <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+    <!--Lets you use simpleRTC to connect the two computers using ICE and turn servers-->
+    <script src="http://kevingleason.me/SimpleRTC/js/webrtc.js"></script>
+    <!--Used for the date and time functions-->
+    <script type="text/javascript" src="script.js"></script>
+    <!--Keeps all the DIV's in the right spot, as well as organizes the video area-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body id="body">
+<!--iiiiiiiiiiiiiiiiiiii TOP CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+    <div id="top-container">
+      <!--BBD LOGO TOP LEFT-->
+      <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
+      <!--Title of the page, TOP MIDDLE-->
+      <img src="Pictures/title.png" alt="title" height="100" width="400" id="title">
+      <!--The Date top right corner-->
+      <h1 id="dtField"></h1>
+      <!--The Time, right below the date-->
+      <h2 id="showTime"></h2>
+    </div>
+<!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+    <!--Main div below top div-->
+    <div id="main-container">
+      <div id="left-container">
+        <!--Birthdays and Anniversary's go here!!!!-->
+        <h1>Birthdays and Anniversary's</h1>
+        <p>This is all about peoples birthdays and anniversaries. Create an excel file with a format and then
+        Pull the information over as a resources using Javascript. After that use a function holding a date and
+        a display timer for a week before the actual birthday/anniversary is.</p>
+
+        <!--INSTRUCTIONS FOR TESTING-->
+        <h2>How to Test!</h2>
+        <p>1.Type Name into Username box</p>
+        <p> 2.Click Login and make sure Username box is Green</p>
+        <p> 3.Open Second tab in browser and repeat 1 & 2</p>
+        <p> 4.Type in opposite tabs username in call box</p>
+        <p>5.Push Call button</p>
+        <p>6.Press F11 to enlarge and unenlarge screen</p>
+        <!--Login button and text box-->
+        <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
+            <input type="text" name="username" id="username" placeholder="Pick a username!" />
+            <input type="submit" name="login_submit" value="Log In">
+        </form>
+        <!--Call button and text box-->
+        <form name="callForm" id="call" action="#" onsubmit="return makeCall(this);">
+            <input type="text" name="number" placeholder="Enter user to dial!" />
+            <input type="submit" value="Call"/>
+        </form>
+
+
+      </div>
+<!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+      <div id="mid-container">
+        <!--Video Div for new video to be created in-->
+        <div id="vid-box"></div>
+      </div>
+<!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+      <div id="right-container">
+        <h1 id="lrgTitle">Events</h1>
+        <h2 class="eventTitle">
+          <script type="text/javascript">
+            function qs(search_for) {
+              var query = window.location.search.substring(1);
+              var parms = query.split('&');
+              for (var i=0; i<parms.length; i++) {
+                var pos = parms[i].indexOf('=');
+                if (pos > 0  && search_for == parms[i].substring(0,pos)) {
+                  var newURI = decodeURIComponent(parms[i].substring(pos+1))
+                  newURI = newURI.replace(/\+/g, " ");
+                  return newURI;
+                }
+              }
+              return "";
+            }
+            document.write(qs("title"));
+
+          </script>
+        </h2>
+
+          <h3 class="eventBox">
+          <script type="text/javascript">
+            document.write(qs("events"));
+          </script>
+         </h3>
+
+         <h2 class="eventTitle">
+         <script type="text/javascript">
+           document.write(qs("title2"));
+         </script>
+       </h2>
+
+        <h3 class="eventBox">
+        <script type="text/javascript">
+          document.write(qs("events2"));
+        </script>
+       </h3>
+
+       <h2 class="eventTitle">
+       <script type="text/javascript">
+         document.write(qs("title3"));
+       </script>
+     </h2>
+
+     <h3 class="eventBox"> 
+     <script type="text/javascript">
+       document.write(qs("events3"));
+     </script>
+    </h3>
+
+        <pre id="messages"></pre>
+        <!--Edit informational messages-->
+        </div>
+      </div>
+<!--iiiiiiiiiiiiiiiiiiiii BOTTOM CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+      <div id="bottom-container">
+      <!--Bottom container not supposed to being shown
+          Meeting 1 asked to be taken out-->
+      </div>
+    </body>
+<!--iiiiiiiiiiiiiiiiiiiiii Javascript for WEB RTC iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+    <script type="text/javascript">
+      /*Creates new video object in vid-box container*/
+      var video_out = document.getElementById("vid-box");
+      /*Using pubnub to grab the publish key and the subscribe key*/
+      function login(form) {
+        var phone = window.phone = PHONE({
+            number        : form.username.value || "Anonymous", // listen on username line else Anonymous
+            publish_key   : 'pub-c-c0eba782-00c1-497f-afa4-d766b32d66af',
+            subscribe_key : 'sub-c-cf519308-79b5-11e5-9720-0619f8945a4f',
+        });
+    /*If the connection works with the login text box goes green*/
+        phone.ready(function(){ form.username.style.background="#55ff5b"; });
+        phone.receive(function(session){
+            session.connected(function(session) { video_out.appendChild(session.video); });
+            session.ended(function(session) { video_out.innerHTML=''; });
+        });
+        return false;   // So the form does not submit.
+    }
+    /*Making a new call, if you are not logged in it will warn you*/
+    function makeCall(form){
+        if (!window.phone) alert("Login First!");
+        else phone.dial(form.number.value);
+        return false;
+    }
+    </script>
+<!--iiiiiiiiiiiiiiiiiiiiii END iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+</html>
