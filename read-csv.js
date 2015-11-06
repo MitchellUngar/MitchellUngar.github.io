@@ -50,6 +50,7 @@ function drawOutput(lines){
 	document.getElementById("left-container").innerHTML = "";
 	var table = document.createElement("table");
 	var birthdayTitle = document.createElement("H1");
+	birthdayTitle.className = "birthdayTitle";
 	birthdayTitle.appendChild(document.createTextNode("Birthdays"));
 	document.getElementById("left-container").appendChild(birthdayTitle);
 	for (var i = 0; i < lines.length; i++) {
@@ -70,6 +71,7 @@ function drawOutput(lines){
 
 				if(lines[i][3] == dateString){
 					var birthdayDetails = document.createElement("H4")
+					birthdayDetails.className = "birthdayDetails";
 					birthdayDetails.appendChild(document.createTextNode(firstName + " " + lastName + " " + birthMonth + " " + birthDay));
 					document.getElementById("left-container").appendChild(birthdayDetails);
 					cell.appendChild(document.createTextNode("HAPPY BIRTHDAY:    "));
@@ -79,6 +81,7 @@ function drawOutput(lines){
 		}
 	}
 	var anniversaryTitle = document.createElement("H1");
+	anniversaryTitle.className = "anniversaryTitle";
 	anniversaryTitle.appendChild(document.createTextNode("Anniversaries"));
 	document.getElementById("left-container").appendChild(anniversaryTitle);
 	for (var i = 0; i < lines.length; i++) {
@@ -99,7 +102,8 @@ function drawOutput(lines){
 				var anniveraryYear = lines[i][6];
 
 				if(lines[i][5] == dateString){
-					var anniversaryDetails = document.createElement("H4")
+					var anniversaryDetails = document.createElement("H4");
+					anniversaryDetails.className = "anniversaryDetails";
 					anniversaryDetails.appendChild(document.createTextNode(firstName + " " + lastName + " " + anniversaryMonth + " " + anniversaryDay + " " + anniveraryYear));
 					document.getElementById("left-container").appendChild(anniversaryDetails);
 				}

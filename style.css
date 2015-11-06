@@ -68,10 +68,6 @@ VERSION: 1.0.3
 }
 /*CSS Video Container(Around the Webcam video)*/
 #vid-box {
-    border-style: solid;
-    border-width: thick;
-    /*Temporarily blue border(Take out before final run)*/
-    border-color: blue;
     height: 400;
     width: 500;
     margin-left: 50px;
@@ -84,15 +80,15 @@ VERSION: 1.0.3
 /*The field that holds the Date(Helped with script.js)*/
 #dtField {
     float:right;
-    margin-right:150px;
+    margin-right:50px;
     margin-top:-100px;
     font-size: 250%;
-    color: yellow;
+    color: #FEE526;
 }
 /*The Field that shows the Time(Helped with script.js)*/
 #showTime {
     float:right;
-    margin-right:150px;
+    margin-right:50px;
     margin-top:-50px;
     font-size: 250%;
     color: #FEE526;
@@ -110,6 +106,25 @@ VERSION: 1.0.3
   text-decoration: underline;
 }
 .eventContent{
+
   text-align: left;
-  margin-left:2%;
+  margin-left:25%;
+}
+.birthdayDetails{
+  text-align: left;
+  margin: 2%;
+}
+.birthdayTitle{
+  text-align: center;
+}
+.anniversaryTitle{
+  text-align: center;
+}
+.anniversaryDetails{
+  text-align: left;
+  margin-left: 2%;
+}
+.calIMG{
+  float:left;
+  margin-left: 2%;
 }
