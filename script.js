@@ -1,11 +1,16 @@
 /*
-TITLE: Date and Time Javascript Windows.onload
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!DIGITAL BUZZBOARD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
-DATE: October 16 2015
+DATE: November 6 2015
+VERSION: 1.0.3
 
 What this javascript does is allow the webpage display a Date and time that always is running.
 */
 /*Beginning of Date function*/
+
 function initDate() {
   /*an Array of months and days*/
   var dayName = new Array("Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");

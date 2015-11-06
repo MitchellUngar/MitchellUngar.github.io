@@ -41,12 +41,11 @@ function errorHandler(evt) {
 
 function drawOutput(lines){
 	var monName = new Array("January", "February", "March", "April", "May", "June", "July", "August",
-   "September", "October","November","December");
-var date = new Date();
-month = date.getMonth() + 1;
-day = date.getDate() + 1;
-
-dateString = monName[date.getMonth()];
+   												"September", "October","November","December");
+	var date = new Date();
+	month = date.getMonth() + 1;
+	day = date.getDate() + 1;
+	dateString = monName[date.getMonth()];
 	//Clear previous data
 	document.getElementById("left-container").innerHTML = "";
 	var table = document.createElement("table");

@@ -5,10 +5,10 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
-DATE: October 30 2015
-VERSION: 1.0.2
+DATE: November 6 2015
+VERSION: 1.0.3
 This program uses "WebRTC" through javascript to connect two computers
-through git pages and pudhub and allow two locations to see eachother through
+through git pages and pubnub and allow two locations to see eachother through
 webcam, and to see the birthdays and anniversary's of fellow employee's. It
 Also shows the time and date.
 
@@ -20,21 +20,21 @@ it is not HTTPS it is HTTP.
 Reason is that the security stops the camera stream.
 NOTE:
 When it comes to connecting to other computers it runs better
-in firfox. With google chrome sometimes doesn't display camera
+in firefox. With google chrome sometimes doesn't display camera
 but will produce audio.
 TODO
-1. See what Graphics are needed, Meeting today will show that information.
-2. Find a color scheme that works with BBD and stick with it(Meeting)
-3. Add more content and see what is needed to be done.
+1. Find a color scheme that works with BBD and stick with it(Meeting)
+2. Make events div dynamic
+3. Make Anniversary and Birthday div autoscroll animation
 
 NOTE:
 Resources:
+buzzboardindex.html
+excel.csv
+index.html
+read-csv.js
 script.js
-index.js
-index.HTML
 style.css
-BBD LOGO Pictures
-Background Picture
 -->
 <html>
   <head>
@@ -71,8 +71,6 @@ Background Picture
         <h1>Birthdays and Anniversary's</h1>
         <script type="text/javascript" src="read-csv.js"></script>
             <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
-      <button onclick="handleFiles(this.files)">Click me</button>
-
         <!--INSTRUCTIONS FOR TESTING-->
         <h2>How to Test!</h2>
         <p>1.Type Name into Username box</p>
@@ -91,8 +89,6 @@ Background Picture
             <input type="text" name="number" placeholder="Enter user to dial!" />
             <input type="submit" value="Call"/>
         </form>
-
-
       </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
       <div id="mid-container">
@@ -103,6 +99,7 @@ Background Picture
       <div id="right-container">
         <h1 id="lrgTitle">Events</h1>
         <h2 class="eventTitle">
+        <!--Lets you read the URL for variables-->
           <script type="text/javascript">
             function qs(search_for) {
               var query = window.location.search.substring(1);
@@ -117,47 +114,42 @@ Background Picture
               }
               return "";
             }
-            document.write(qs("title"));
-            document.write(qs("date"));
+            /*Creating new variables for each title and content piece
+            Later work on dynamic with JAVA remotes*/
+            var eventTitle1 = document.createElement("H2");
+            var eventTitle2 = document.createElement("H2");
+            var eventTitle3 = document.createElement("H2");
+            var eventContent1 = document.createElement("H3");
+            var eventContent2 = document.createElement("H3");
+            var eventContent3 = document.createElement("H3");
+
+            /*Adding classes to the event variables so you can use CSS*/
+            eventTitle1.className = "eventTitle";
+            eventTitle2.className = "eventTitle";
+            eventTitle3.className = "eventTitle";
+            eventContent1.className = "eventContent";
+            eventContent2.className = "eventContent";
+            eventContent3.className = "eventContent";
+
+            /*Putting the TITLE1 and DATE1 onto the screen*/
+          	eventTitle1.appendChild(document.createTextNode(qs("title") + " " + qs("datepicker")));
+          	document.getElementById("right-container").appendChild(eventTitle1);
+            /*Putting the EVENTS1 onto the screen*/
+            eventContent1.appendChild(document.createTextNode(qs("events")));
+            document.getElementById("right-container").appendChild(eventContent1);
+            /*Putting the TITLE2 and DATE2 onto the screen*/
+            eventTitle2.appendChild(document.createTextNode(qs("title2") + " " + qs("datepicker2")));
+          	document.getElementById("right-container").appendChild(eventTitle2);
+            /*Putting the EVENTS2 onto the screen*/
+            eventContent2.appendChild(document.createTextNode(qs("events2")));
+            document.getElementById("right-container").appendChild(eventContent2);
+            /*Putting the TITLE3 and DATE3 onto the screen*/
+            eventTitle3.appendChild(document.createTextNode(qs("title3") + " " + qs("datepicker3")));
+          	document.getElementById("right-container").appendChild(eventTitle3);
+            /*Putting the EVENTS3 onto the screen*/
+            eventContent3.appendChild(document.createTextNode(qs("events3")));
+            document.getElementById("right-container").appendChild(eventContent3);
           </script>
-        </h2>
-
-          <h3 class="eventBox">
-          <script type="text/javascript">
-            document.write(qs("events"));
-
-          </script>
-         </h3>
-
-         <h2 class="eventTitle">
-         <script type="text/javascript">
-           document.write(qs("title2"));
-           document.write(qs("date2"));
-         </script>
-       </h2>
-
-        <h3 class="eventBox">
-        <script type="text/javascript">
-          document.write(qs("events2"));
-        </script>
-       </h3>
-
-       <h2 class="eventTitle">
-       <script type="text/javascript">
-         document.write(qs("title3"));
-         document.write(qs("date3"));
-       </script>
-     </h2>
-
-     <h3 class="eventBox">
-     <script type="text/javascript">
-       document.write(qs("events3"));
-     </script>
-    </h3>
-
-        <pre id="messages"></pre>
-        <!--Edit informational messages-->
-        </div>
       </div>
 <!--iiiiiiiiiiiiiiiiiiiii BOTTOM CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
       <div id="bottom-container">
