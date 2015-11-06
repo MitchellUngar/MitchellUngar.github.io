@@ -46,6 +46,7 @@ VERSION: 1.0.2*/
     background: #CCC;
     opacity:0.6;
 	  float: left;
+    overflow:hidden;
 }
 /*CSS Right Container*/
 #right-container {
@@ -97,8 +98,7 @@ VERSION: 1.0.2*/
   height: 100px;
 }
 .eventTitle{
-
-  margin-left: 35%;
+  margin-left: 25%;
   text-decoration: underline;
 }
 .eventBox{

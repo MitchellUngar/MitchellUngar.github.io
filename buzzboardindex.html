@@ -69,9 +69,9 @@ Background Picture
       <div id="left-container">
         <!--Birthdays and Anniversary's go here!!!!-->
         <h1>Birthdays and Anniversary's</h1>
-        <p>This is all about peoples birthdays and anniversaries. Create an excel file with a format and then
-        Pull the information over as a resources using Javascript. After that use a function holding a date and
-        a display timer for a week before the actual birthday/anniversary is.</p>
+        <script type="text/javascript" src="read-csv.js"></script>
+            <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
+      <button onclick="handleFiles(this.files)">Click me</button>
 
         <!--INSTRUCTIONS FOR TESTING-->
         <h2>How to Test!</h2>
@@ -118,19 +118,21 @@ Background Picture
               return "";
             }
             document.write(qs("title"));
-
+            document.write(qs("date"));
           </script>
         </h2>
 
           <h3 class="eventBox">
           <script type="text/javascript">
             document.write(qs("events"));
+
           </script>
          </h3>
 
          <h2 class="eventTitle">
          <script type="text/javascript">
            document.write(qs("title2"));
+           document.write(qs("date2"));
          </script>
        </h2>
 
@@ -143,10 +145,11 @@ Background Picture
        <h2 class="eventTitle">
        <script type="text/javascript">
          document.write(qs("title3"));
+         document.write(qs("date3"));
        </script>
      </h2>
 
-     <h3 class="eventBox"> 
+     <h3 class="eventBox">
      <script type="text/javascript">
        document.write(qs("events3"));
      </script>
