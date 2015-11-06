@@ -45,7 +45,7 @@ VERSION: 1.0.3
 #left-container {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    margin-left: 25px;
+    margin-left: 0px;
     width: 600px;
     height: 675px;
     background: #CCC;
@@ -58,7 +58,7 @@ VERSION: 1.0.3
 #right-container {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    margin-right: -75px;
+    margin-right: -100px;
    	margin-top: -450px;
     width: 600px;
     height: 675px;
