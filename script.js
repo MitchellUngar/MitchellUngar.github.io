@@ -59,7 +59,7 @@ function initDate() {
    else if(thisMonth == 11) {
      z.src = "Pictures/Novemberbg.jpg";
    }
-   else if(thisMonth == 12) {
+   if(thisMonth == 12) {
      z.src = "Pictures/Decemberbg.jpg";
    }
 document.body.background= z.src;
