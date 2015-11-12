@@ -22,12 +22,12 @@ VERSION: 1.0.3
    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
    <!-- Load jQuery UI Main JS  -->
    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-
    <!-- Load SCRIPT.JS which will create datepicker for input field  -->
    <script src="script.js"></script>
 </head>
 <body id="body">
 <!--iiiiiiiiiiiiiiiiiiii TOP CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+
   <div id="top-container">
     <!--BBD LOGO TOP LEFT-->
     <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
@@ -36,17 +36,24 @@ VERSION: 1.0.3
   </div>
 <!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
   <!--Main div below top div-->
+  <form action='buzzboardindex.html' method='get'>
   <div id="main-container">
     <div id="left-container">
 
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="mid-container">
-
+      <p>Type in Embed Youtube code from site Or leave blank for no video!</br>
+      <input type='text' name='youtubeURL' id="youtubeURL"/></br>
+        Handles 640 width and any height.</br>
+      <h2>rel=0&autoplay=1&loop=1&playlist=V3oJR5IAMxM</h2></br>
+        The bolded code loops the video as well as autoplays it. Place it after the
+        rel=0 and change the playlist code to the whatever the video code is.
+        Should be in the embed line. </p>
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="right-container">
-      <form action='buzzboardindex.html' method='get'>
+
         <h3>
           <label>Event 1:</label></br>
         </h3>
@@ -67,13 +74,9 @@ VERSION: 1.0.3
           <textarea name='events3' class='textarea'></textarea></p>
           <input type='submit'>
 
-
-    <p>Type in Embed Youtube code from site Or leave blank for no video!</br>
-    <input type='text' name='youtubeURL' id="youtubeURL"/></br>
-      Handles 640 width and any height.</p>
-    </form>
     </div>
   </div>
+  </form>
 <!--iiiiiiiiiiiiiiiiiiiii BOTTOM CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
   <div id="bottom-container">
 

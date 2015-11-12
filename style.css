@@ -9,7 +9,7 @@ VERSION: 1.0.3
 */
 /*CSS Body*/
 #body {
-  background: url("Pictures/blueBackground.jpg");
+  /*background: url("Pictures/Septemberbg.jpg");*/
   background-repeat: no-repeat;
   background-size:cover;
 }
