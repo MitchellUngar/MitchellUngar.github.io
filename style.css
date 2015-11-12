@@ -93,9 +93,12 @@ VERSION: 1.0.3
     font-size: 250%;
     color: #FEE526;
 }
-#lrgTitle{
+#lrgTitle {
   text-align: center;
   text-decoration: underline;
+}
+#youtubeURL {
+  width: 500px;
 }
 .textarea{
   width: 500px;
@@ -127,4 +130,8 @@ VERSION: 1.0.3
 .calIMG{
   float:left;
   margin-left: 2%;
+}
+.rcs{
+  width: 580px;
+  height: 150px;
 }
