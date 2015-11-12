@@ -25,6 +25,10 @@ function initDate() {
    var dtString = monName[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
    /*Sending information to the HTML's <h1> tag called dtField*/
    document.getElementById("dtField").innerHTML = dtString;
+
+   /*iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii Background Pictures iiiiiiiiiiiiiiiiiiiiiiii*/
+
+   /*Allows the months to change the background picture*/
    var z = new Image();
    if(thisMonth == 1) {
      z.src = "Pictures/Januarybg.jpg";
@@ -675,7 +679,7 @@ function backgroundMonthPictures() {
 /*End of show the time function*/
 
 /*Javascript isn't smart enough to have two window.onload functions being used
-So I created a function the runs the other two functions so all I have to do
+So I created a function the runs the other three functions so all I have to do
 is call windows.onload once*/
 function start() {
   initDate();
