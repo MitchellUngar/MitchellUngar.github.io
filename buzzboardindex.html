@@ -98,8 +98,12 @@ style.css
 <!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
       <div id="right-container">
         <h1 id="lrgTitle">Events</h1>
-        <h2 class="eventTitle">
+        <h2 class="eventTitle"></h2>
         <!--Lets you read the URL for variables-->
+        <div id="right-container-section-1" class = "rcs"></div>
+        <div id="right-container-section-2" class = "rcs"></div>
+        <div id="right-container-section-3" class = "rcs"></div>
+
           <script type="text/javascript">
             function qs(search_for) {
               var query = window.location.search.substring(1);
@@ -130,6 +134,9 @@ style.css
             var day1 = document.createElement("H2");
             var day2 = document.createElement("H2");
             var day3 = document.createElement("H2");
+            
+            document.getElementById("vid-box").innerHTML = qs("youtubeURL");
+
 
             /*Adding classes to the event variables so you can use CSS*/
             eventTitle1.className = "eventTitle";
@@ -155,9 +162,10 @@ style.css
             img3.setAttribute("height", "100");
             img3.setAttribute("width", "100");
             img3.className = "calIMG";
+
             /*Putting the TITLE1 and DATE1 onto the screen*/
           	eventTitle1.appendChild(document.createTextNode(qs("title") + " " + qs("datepicker")));
-          	document.getElementById("right-container").appendChild(eventTitle1);
+          	document.getElementById("right-container-section-1").appendChild(eventTitle1);
             if(arr1[1] == "01")
             {
               img1.setAttribute("src", "Pictures/calendar_1.png");
@@ -310,15 +318,15 @@ style.css
               img1.setAttribute("src", "Pictures/calendar_31.png");
               img1.setAttribute("alt","31");
             }
-            document.getElementById("right-container").appendChild(img1);
+            document.getElementById("right-container-section-1").appendChild(img1);
 
             /*Putting the EVENTS1 onto the screen*/
             eventContent1.appendChild(document.createTextNode(qs("events")));
-            document.getElementById("right-container").appendChild(eventContent1);
+            document.getElementById("right-container-section-1").appendChild(eventContent1);
 
             /*Putting the TITLE2 and DATE2 onto the screen*/
             eventTitle2.appendChild(document.createTextNode(qs("title2") + " " + qs("datepicker2")));
-          	document.getElementById("right-container").appendChild(eventTitle2);
+          	document.getElementById("right-container-section-2").appendChild(eventTitle2);
 
             if(arr2[1] == "01")
             {
@@ -472,17 +480,17 @@ style.css
               img2.setAttribute("src", "Pictures/calendar_31.png");
               img2.setAttribute("alt","31");
             }
-            document.getElementById("right-container").appendChild(img2);
+            document.getElementById("right-container-section-2").appendChild(img2);
 
             /*Putting the EVENTS2 onto the screen*/
             eventContent2.setAttribute("float","left");
             eventContent2.appendChild(document.createTextNode(qs("events2")));
-            document.getElementById("right-container").appendChild(eventContent2);
+            document.getElementById("right-container-section-2").appendChild(eventContent2);
 
 
             /*Putting the TITLE3 and DATE3 onto the screen*/
             eventTitle3.appendChild(document.createTextNode(qs("title3") + " " + qs("datepicker3")));
-          	document.getElementById("right-container").appendChild(eventTitle3);
+          	document.getElementById("right-container-section-3").appendChild(eventTitle3);
 
             if(arr3[1] == "01")
             {
@@ -636,11 +644,11 @@ style.css
               img3.setAttribute("src", "Pictures/calendar_31.png");
               img3.setAttribute("alt","31");
             }
-            document.getElementById("right-container").appendChild(img3);
+            document.getElementById("right-container-section-3").appendChild(img3);
             /*Putting the EVENTS3 onto the screen*/
 
             eventContent3.appendChild(document.createTextNode(qs("events3")));
-            document.getElementById("right-container").appendChild(eventContent3);
+            document.getElementById("right-container-section-3").appendChild(eventContent3);
           </script>
       </div>
 <!--iiiiiiiiiiiiiiiiiiiii BOTTOM CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
