@@ -587,6 +587,7 @@ function eventHandler() {
   eventContent3.appendChild(document.createTextNode(qs("events3")));
   document.getElementById("right-container-section-3").appendChild(eventContent3);
 }
+pictureHandler();
 }
 /*End of show the time function*/
 
