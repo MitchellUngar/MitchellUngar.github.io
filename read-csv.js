@@ -55,7 +55,7 @@ function drawOutput(lines){
 	var date = new Date();
 	/*date function is 0 justified, so you have to plus one to go from 1-12*/
 	month = date.getMonth() + 1;
-	day = date.getDate() + 1;
+	day = date.getDate();
 	/*Grabbing the date string by using the integer that DATE gives you*/
 	dateString = monName[date.getMonth()];
 	//Clear previous data
@@ -68,6 +68,7 @@ function drawOutput(lines){
 	birthdayTitle.appendChild(document.createTextNode("Birthdays"));
 	/*Add the birthday title to the left container*/
 	document.getElementById("left-container").appendChild(birthdayTitle);
+	var ctr = 0;
 	/*Create a row*/
 	for (var i = 0; i < lines.length; i++) {
 		var row = table.insertRow(-1);
@@ -118,11 +119,49 @@ function drawOutput(lines){
 				var anniversaryMonth = lines[i][5];
 				var anniveraryYear = lines[i][6];
 
-				if(lines[i][5] == dateString){
+				if(anniversaryMonth == dateString){
 					var anniversaryDetails = document.createElement("H4");
 					anniversaryDetails.className = "anniversaryDetails";
 					anniversaryDetails.appendChild(document.createTextNode(firstName + " " + lastName + " " + anniversaryMonth + " " + anniversaryDay + " " + anniveraryYear));
 					document.getElementById("left-container").appendChild(anniversaryDetails);
+					
+				}
+
+				if(anniversaryMonth == dateString && anniversaryDay == day){
+
+						ctr++;
+						var anniversaryDetails = document.createElement("H4");
+						anniversaryDetails.className = "anniversaryDetails";
+						anniversaryDetails.appendChild(document.createTextNode(firstName + " " + lastName + " " + anniversaryMonth + " " + anniversaryDay + " " + anniveraryYear));
+						//document.getElementById("right-container").appendChild(anniversaryDetails);
+						var divId = 'annivDiv' + ctr;
+						var altImg = 'Anniv' + ctr;
+						//document.getElementById("right-container").appendChild(document.createTextNode(divId));
+
+						var annivDiv = document.createElement('div');
+						annivDiv.className = 'rcs';
+						annivDiv.id = divId;
+						document.getElementById("right-container").appendChild(annivDiv);
+
+
+						var annivImg = document.createElement('img');
+						annivImg.setAttribute("height", "100");
+					  annivImg.setAttribute("width", "100");
+					  annivImg.className = "calIMG";
+
+						annivImg.setAttribute("src", "Pictures/Anniversary.png");
+				    annivImg.setAttribute("alt",altImg);
+
+						annivDiv.appendChild(annivImg);
+
+						var annivInfo = document.createElement("H1");
+						var br = document.createElement("br");
+						annivInfo.className = "anniversaryDetails";
+						annivInfo.appendChild(document.createTextNode("Happy Anniversary!"));
+						annivInfo.appendChild(br);
+						annivInfo.appendChild(document.createTextNode(firstName + " " + lastName));
+
+						annivDiv.appendChild(annivInfo);
 				}
       }
 
