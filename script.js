@@ -66,7 +66,8 @@ function initDate() {
    if(thisMonth == 12) {
      z.src = "Pictures/Decemberbg.jpg";
    }
-document.body.background= z.src;
+   /*Adds the month to the listing and shows new background*/
+   document.body.background= z.src;
 }
 /*End of Date Function*/
 /*Beginning of showTheTime function*/
@@ -111,20 +112,22 @@ $(document).ready(
 
   /* This is the function that will get executed after the DOM is fully loaded */
   function () {
+    /*Creates the first datepicker*/
     $( "#datepicker" ).datepicker({
       changeMonth: true,//this option for allowing user to select month
       changeYear: true //this option for allowing user to select from year range
     });
+    /*Creates the second datepicker*/
     $( "#datepicker2" ).datepicker({
       changeMonth: true,//this option for allowing user to select month
       changeYear: true //this option for allowing user to select from year range
     });
+    /*Creates third datepicker*/
     $( "#datepicker3" ).datepicker({
       changeMonth: true,//this option for allowing user to select month
       changeYear: true //this option for allowing user to select from year range
     });
   }
-
 );
 function eventHandler() {
   function qs(search_for) {
@@ -140,6 +143,7 @@ function eventHandler() {
     }
     return "";
   }
+  function pictureHandler() {
   var img1 = document.createElement('img');
   var img2 = document.createElement('img');
   var img3 = document.createElement('img');
@@ -188,34 +192,28 @@ function eventHandler() {
   /*Putting the TITLE1 and DATE1 onto the screen*/
   eventTitle1.appendChild(document.createTextNode(qs("title") + " " + qs("datepicker")));
   document.getElementById("right-container-section-1").appendChild(eventTitle1);
-
-  if(arr1[1] == "01")
-  {
+/*All the if statements that handle the day picture for events1*/
+  if(arr1[1] == "01"){
     img1.setAttribute("src", "Pictures/calendar_1.png");
     img1.setAttribute("alt","1");
   }
-  else if(arr1[1] == "02")
-  {
+  else if(arr1[1] == "02"){
     img1.setAttribute("src", "Pictures/calendar_2.png");
     img1.setAttribute("alt","2");
   }
-  else if(arr1[1] == "03")
-  {
+  else if(arr1[1] == "03"){
     img1.setAttribute("src", "Pictures/calendar_3.png");
     img1.setAttribute("alt","3");
   }
-  else if(arr1[1] == "04")
-  {
+  else if(arr1[1] == "04"){
     img1.setAttribute("src", "Pictures/calendar_4.png");
     img1.setAttribute("alt","4");
   }
-  else if(arr1[1] == "05")
-  {
+  else if(arr1[1] == "05"){
     img1.setAttribute("src", "Pictures/calendar_5.png");
     img1.setAttribute("alt","5");
   }
-  else if(arr1[1] == "06")
-  {
+  else if(arr1[1] == "06"){
     img1.setAttribute("src", "Pictures/calendar_6.png");
     img1.setAttribute("alt","6");
   }
@@ -227,157 +225,127 @@ function eventHandler() {
     img1.setAttribute("src", "Pictures/calendar_8.png");
     img1.setAttribute("alt","8");
   }
-  else if(arr1[1] === "09" || arr2[1] == "09"){
+  else if(arr1[1] === "09"){
     img1.setAttribute("src", "Pictures/calendar_9.png");
     img1.setAttribute("alt","9");
   }
-  else if(arr1[1] == "10")
-  {
+  else if(arr1[1] == "10"){
     img1.setAttribute("src", "Pictures/calendar_10.png");
     img1.setAttribute("alt","10");
   }
-  else if(arr1[1] == "11")
-  {
+  else if(arr1[1] == "11"){
     img1.setAttribute("src", "Pictures/calendar_11.png");
     img1.setAttribute("alt","11");
   }
-  else if(arr1[1] == "12")
-  {
+  else if(arr1[1] == "12"){
     img1.setAttribute("src", "Pictures/calendar_12.png");
     img1.setAttribute("alt","12");
   }
-  else if(arr1[1] == "13")
-  {
+  else if(arr1[1] == "13"){
     img1.setAttribute("src", "Pictures/calendar_13.png");
     img1.setAttribute("alt","13");
   }
-  else if(arr1[1] == "14")
-  {
+  else if(arr1[1] == "14"){
     img1.setAttribute("src", "Pictures/calendar_14.png");
     img1.setAttribute("alt","14");
   }
-  else if(arr1[1] == "15")
-  {
+  else if(arr1[1] == "15"){
     img1.setAttribute("src", "Pictures/calendar_15.png");
     img1.setAttribute("alt","15");
   }
-  else if(arr1[1] == "16")
-  {
+  else if(arr1[1] == "16"){
     img1.setAttribute("src", "Pictures/calendar_16.png");
     img1.setAttribute("alt","16");
   }
-  else if(arr1[1] == "17")
-  {
+  else if(arr1[1] == "17"){
     img1.setAttribute("src", "Pictures/calendar_17.png");
     img1.setAttribute("alt","17");
   }
-  else if(arr1[1] == "18")
-  {
+  else if(arr1[1] == "18"){
     img1.setAttribute("src", "Pictures/calendar_18.png");
     img1.setAttribute("alt","18");
   }
-  else if(arr1[1] == "19")
-  {
+  else if(arr1[1] == "19"){
     img1.setAttribute("src", "Pictures/calendar_19.png");
     img1.setAttribute("alt","19");
   }
-  else if(arr1[1] == "20")
-  {
+  else if(arr1[1] == "20"){
     img1.setAttribute("src", "Pictures/calendar_20.png");
     img1.setAttribute("alt","20");
   }
-  else if(arr1[1] == "21")
-  {
+  else if(arr1[1] == "21"){
     img1.setAttribute("src", "Pictures/calendar_21.png");
     img1.setAttribute("alt","21");
   }
-  else if(arr1[1] == "22")
-  {
+  else if(arr1[1] == "22"){
     img1.setAttribute("src", "Pictures/calendar_22.png");
     img1.setAttribute("alt","22");
   }
-  else if(arr1[1] == "23")
-  {
+  else if(arr1[1] == "23"){
     img1.setAttribute("src", "Pictures/calendar_23.png");
     img1.setAttribute("alt","23");
   }
-  else if(arr1[1] == "24")
-  {
+  else if(arr1[1] == "24"){
     img1.setAttribute("src", "Pictures/calendar_24.png");
     img1.setAttribute("alt","24");
   }
-  else if(arr1[1] == "25")
-  {
+  else if(arr1[1] == "25"){
     img1.setAttribute("src", "Pictures/calendar_25.png");
     img1.setAttribute("alt","25");
   }
-  else if(arr1[1] == "26")
-  {
+  else if(arr1[1] == "26"){
     img1.setAttribute("src", "Pictures/calendar_26.png");
     img1.setAttribute("alt","26");
   }
-  else if(arr1[1] == "27")
-  {
+  else if(arr1[1] == "27"){
     img1.setAttribute("src", "Pictures/calendar_27.png");
     img1.setAttribute("alt","27");
   }
-  else if(arr1[1] == "28")
-  {
+  else if(arr1[1] == "28"){
     img1.setAttribute("src", "Pictures/calendar_28.png");
     img1.setAttribute("alt","28");
   }
-  else if(arr1[1] == "29")
-  {
+  else if(arr1[1] == "29"){
     img1.setAttribute("src", "Pictures/calendar_29.png");
     img1.setAttribute("alt","29");
   }
-  else if(arr1[1] == "30")
-  {
+  else if(arr1[1] == "30"){
     img1.setAttribute("src", "Pictures/calendar_30.png");
     img1.setAttribute("alt","30");
   }
-  else if(arr1[1] == "31")
-  {
+  else if(arr1[1] == "31"){
     img1.setAttribute("src", "Pictures/calendar_31.png");
     img1.setAttribute("alt","31");
   }
   document.getElementById("right-container-section-1").appendChild(img1);
-
   /*Putting the EVENTS1 onto the screen*/
   eventContent1.appendChild(document.createTextNode(qs("events")));
   document.getElementById("right-container-section-1").appendChild(eventContent1);
-
   /*Putting the TITLE2 and DATE2 onto the screen*/
   eventTitle2.appendChild(document.createTextNode(qs("title2") + " " + qs("datepicker2")));
   document.getElementById("right-container-section-2").appendChild(eventTitle2);
-
-  if(arr2[1] == "01")
-  {
+  /*All the if statements that handle the day picture for events2*/
+  if(arr2[1] == "01"){
     img2.setAttribute("src", "Pictures/calendar_1.png");
     img2.setAttribute("alt","1");
   }
-  else if(arr2[1] == "02")
-  {
+  else if(arr2[1] == "02"){
     img2.setAttribute("src", "Pictures/calendar_2.png");
     img2.setAttribute("alt","2");
   }
-  else if(arr2[1] == "03")
-  {
+  else if(arr2[1] == "03"){
     img2.setAttribute("src", "Pictures/calendar_3.png");
     img2.setAttribute("alt","3");
   }
-  else if(arr2[1] == "04")
-  {
+  else if(arr2[1] == "04"){
     img2.setAttribute("src", "Pictures/calendar_4.png");
     img2.setAttribute("alt","4");
   }
-  else if(arr2[1] == "05")
-  {
+  else if(arr2[1] == "05"){
     img2.setAttribute("src", "Pictures/calendar_5.png");
     img2.setAttribute("alt","5");
   }
-  else if(arr2[1] == "06")
-  {
+  else if(arr2[1] == "06"){
     img2.setAttribute("src", "Pictures/calendar_6.png");
     img2.setAttribute("alt","6");
   }
@@ -389,159 +357,128 @@ function eventHandler() {
     img2.setAttribute("src", "Pictures/calendar_8.png");
     img2.setAttribute("alt","8");
   }
-  else if(arr2[1] === "09" || arr2[1] == "09"){
+  else if(arr2[1] === "09"){
     img2.setAttribute("src", "Pictures/calendar_9.png");
     img2.setAttribute("alt","9");
   }
-  else if(arr2[1] == "10")
-  {
+  else if(arr2[1] == "10"){
     img2.setAttribute("src", "Pictures/calendar_10.png");
     img2.setAttribute("alt","10");
   }
-  else if(arr2[1] == "11")
-  {
+  else if(arr2[1] == "11"){
     img2.setAttribute("src", "Pictures/calendar_11.png");
     img2.setAttribute("alt","11");
   }
-  else if(arr2[1] == "12")
-  {
+  else if(arr2[1] == "12"){
     img2.setAttribute("src", "Pictures/calendar_12.png");
     img2.setAttribute("alt","12");
   }
-  else if(arr2[1] == "13")
-  {
+  else if(arr2[1] == "13"){
     img2.setAttribute("src", "Pictures/calendar_13.png");
     img2.setAttribute("alt","13");
   }
-  else if(arr2[1] == "14")
-  {
+  else if(arr2[1] == "14"){
     img2.setAttribute("src", "Pictures/calendar_14.png");
     img2.setAttribute("alt","14");
   }
-  else if(arr2[1] == "15")
-  {
+  else if(arr2[1] == "15"){
     img2.setAttribute("src", "Pictures/calendar_15.png");
     img2.setAttribute("alt","15");
   }
-  else if(arr2[1] == "16")
-  {
+  else if(arr2[1] == "16"){
     img2.setAttribute("src", "Pictures/calendar_16.png");
     img2.setAttribute("alt","16");
   }
-  else if(arr2[1] == "17")
-  {
+  else if(arr2[1] == "17"){
     img2.setAttribute("src", "Pictures/calendar_17.png");
     img2.setAttribute("alt","17");
   }
-  else if(arr2[1] == "18")
-  {
+  else if(arr2[1] == "18"){
     img2.setAttribute("src", "Pictures/calendar_18.png");
     img2.setAttribute("alt","18");
   }
-  else if(arr2[1] == "19")
-  {
+  else if(arr2[1] == "19"){
     img2.setAttribute("src", "Pictures/calendar_19.png");
     img2.setAttribute("alt","19");
   }
-  else if(arr2[1] == "20")
-  {
+  else if(arr2[1] == "20"){
     img2.setAttribute("src", "Pictures/calendar_20.png");
     img2.setAttribute("alt","20");
   }
-  else if(arr2[1] == "21")
-  {
+  else if(arr2[1] == "21"){
     img2.setAttribute("src", "Pictures/calendar_21.png");
     img2.setAttribute("alt","21");
   }
-  else if(arr2[1] == "22")
-  {
+  else if(arr2[1] == "22"){
     img2.setAttribute("src", "Pictures/calendar_22.png");
     img2.setAttribute("alt","22");
   }
-  else if(arr2[1] == "23")
-  {
+  else if(arr2[1] == "23"){
     img2.setAttribute("src", "Pictures/calendar_23.png");
     img2.setAttribute("alt","23");
   }
-  else if(arr2[1] == "24")
-  {
+  else if(arr2[1] == "24"){
     img2.setAttribute("src", "Pictures/calendar_24.png");
     img2.setAttribute("alt","24");
   }
-  else if(arr2[1] == "25")
-  {
+  else if(arr2[1] == "25"){
     img2.setAttribute("src", "Pictures/calendar_25.png");
     img2.setAttribute("alt","25");
   }
-  else if(arr2[1] == "26")
-  {
+  else if(arr2[1] == "26"){
     img2.setAttribute("src", "Pictures/calendar_26.png");
     img2.setAttribute("alt","26");
   }
-  else if(arr2[1] == "27")
-  {
+  else if(arr2[1] == "27"){
     img2.setAttribute("src", "Pictures/calendar_27.png");
     img2.setAttribute("alt","27");
   }
-  else if(arr2[1] == "28")
-  {
+  else if(arr2[1] == "28"){
     img2.setAttribute("src", "Pictures/calendar_28.png");
     img2.setAttribute("alt","28");
   }
-  else if(arr2[1] == "29")
-  {
+  else if(arr2[1] == "29"){
     img2.setAttribute("src", "Pictures/calendar_29.png");
     img2.setAttribute("alt","29");
   }
-  else if(arr2[1] == "30")
-  {
+  else if(arr2[1] == "30"){
     img2.setAttribute("src", "Pictures/calendar_30.png");
     img2.setAttribute("alt","30");
   }
-  else if(arr2[1] == "31")
-  {
+  else if(arr2[1] == "31"){
     img2.setAttribute("src", "Pictures/calendar_31.png");
     img2.setAttribute("alt","31");
   }
   document.getElementById("right-container-section-2").appendChild(img2);
-
   /*Putting the EVENTS2 onto the screen*/
   eventContent2.setAttribute("float","left");
   eventContent2.appendChild(document.createTextNode(qs("events2")));
   document.getElementById("right-container-section-2").appendChild(eventContent2);
-
-
   /*Putting the TITLE3 and DATE3 onto the screen*/
   eventTitle3.appendChild(document.createTextNode(qs("title3") + " " + qs("datepicker3")));
   document.getElementById("right-container-section-3").appendChild(eventTitle3);
-
-  if(arr3[1] == "01")
-  {
+  /*All the if statements that handle the day picture for events3*/
+  if(arr3[1] == "01"){
     img3.setAttribute("src", "Pictures/calendar_1.png");
     img3.setAttribute("alt","1");
   }
-  else if(arr3[1] == "02")
-  {
+  else if(arr3[1] == "02"){
     img3.setAttribute("src", "Pictures/calendar_2.png");
     img3.setAttribute("alt","2");
   }
-  else if(arr3[1] == "03")
-  {
+  else if(arr3[1] == "03"){
     img3.setAttribute("src", "Pictures/calendar_3.png");
     img3.setAttribute("alt","3");
   }
-  else if(arr3[1] == "04")
-  {
+  else if(arr3[1] == "04"){
     img3.setAttribute("src", "Pictures/calendar_4.png");
     img3.setAttribute("alt","4");
   }
-  else if(arr3[1] == "05")
-  {
+  else if(arr3[1] == "05"){
     img3.setAttribute("src", "Pictures/calendar_5.png");
     img3.setAttribute("alt","5");
   }
-  else if(arr3[1] == "06")
-  {
+  else if(arr3[1] == "06"){
     img3.setAttribute("src", "Pictures/calendar_6.png");
     img3.setAttribute("alt","6");
   }
@@ -553,128 +490,103 @@ function eventHandler() {
     img3.setAttribute("src", "Pictures/calendar_8.png");
     img3.setAttribute("alt","8");
   }
-  else if(arr3[1] === "09" || arr2[1] == "09"){
+  else if(arr3[1] === "09"){
     img3.setAttribute("src", "Pictures/calendar_9.png");
     img3.setAttribute("alt","9");
   }
-  else if(arr3[1] == "10")
-  {
+  else if(arr3[1] == "10"){
     img3.setAttribute("src", "Pictures/calendar_10.png");
     img3.setAttribute("alt","10");
   }
-  else if(arr3[1] == "11")
-  {
+  else if(arr3[1] == "11"){
     img3.setAttribute("src", "Pictures/calendar_11.png");
     img3.setAttribute("alt","11");
   }
-  else if(arr3[1] == "12")
-  {
+  else if(arr3[1] == "12"){
     img3.setAttribute("src", "Pictures/calendar_12.png");
     img3.setAttribute("alt","12");
   }
-  else if(arr3[1] == "13")
-  {
+  else if(arr3[1] == "13"){
     img3.setAttribute("src", "Pictures/calendar_13.png");
     img3.setAttribute("alt","13");
   }
-  else if(arr3[1] == "14")
-  {
+  else if(arr3[1] == "14"){
     img3.setAttribute("src", "Pictures/calendar_14.png");
     img3.setAttribute("alt","14");
   }
-  else if(arr3[1] == "15")
-  {
+  else if(arr3[1] == "15"){
     img3.setAttribute("src", "Pictures/calendar_15.png");
     img3.setAttribute("alt","15");
   }
-  else if(arr3[1] == "16")
-  {
+  else if(arr3[1] == "16"){
     img3.setAttribute("src", "Pictures/calendar_16.png");
     img3.setAttribute("alt","16");
   }
-  else if(arr3[1] == "17")
-  {
+  else if(arr3[1] == "17"){
     img3.setAttribute("src", "Pictures/calendar_17.png");
     img3.setAttribute("alt","17");
   }
-  else if(arr3[1] == "18")
-  {
+  else if(arr3[1] == "18"){
     img3.setAttribute("src", "Pictures/calendar_18.png");
     img3.setAttribute("alt","18");
   }
-  else if(arr3[1] == "19")
-  {
+  else if(arr3[1] == "19"){
     img3.setAttribute("src", "Pictures/calendar_19.png");
     img3.setAttribute("alt","19");
   }
-  else if(arr3[1] == "20")
-  {
+  else if(arr3[1] == "20"){
     img3.setAttribute("src", "Pictures/calendar_20.png");
     img3.setAttribute("alt","20");
   }
-  else if(arr3[1] == "21")
-  {
+  else if(arr3[1] == "21"){
     img3.setAttribute("src", "Pictures/calendar_21.png");
     img3.setAttribute("alt","21");
   }
-  else if(arr3[1] == "22")
-  {
+  else if(arr3[1] == "22"){
     img3.setAttribute("src", "Pictures/calendar_22.png");
     img3.setAttribute("alt","22");
   }
-  else if(arr3[1] == "23")
-  {
+  else if(arr3[1] == "23"){
     img3.setAttribute("src", "Pictures/calendar_23.png");
     img3.setAttribute("alt","23");
   }
-  else if(arr3[1] == "24")
-  {
+  else if(arr3[1] == "24"){
     img3.setAttribute("src", "Pictures/calendar_24.png");
     img3.setAttribute("alt","24");
   }
-  else if(arr3[1] == "25")
-  {
+  else if(arr3[1] == "25"){
     img3.setAttribute("src", "Pictures/calendar_25.png");
     img3.setAttribute("alt","25");
   }
-  else if(arr3[1] == "26")
-  {
+  else if(arr3[1] == "26"){
     img3.setAttribute("src", "Pictures/calendar_26.png");
     img3.setAttribute("alt","26");
   }
-  else if(arr3[1] == "27")
-  {
+  else if(arr3[1] == "27"){
     img3.setAttribute("src", "Pictures/calendar_27.png");
     img3.setAttribute("alt","27");
   }
-  else if(arr3[1] == "28")
-  {
+  else if(arr3[1] == "28"){
     img3.setAttribute("src", "Pictures/calendar_28.png");
     img3.setAttribute("alt","28");
   }
-  else if(arr3[1] == "29")
-  {
+  else if(arr3[1] == "29"){
     img3.setAttribute("src", "Pictures/calendar_29.png");
     img3.setAttribute("alt","29");
   }
-  else if(arr3[1] == "30")
-  {
+  else if(arr3[1] == "30"){
     img3.setAttribute("src", "Pictures/calendar_30.png");
     img3.setAttribute("alt","30");
   }
-  else if(arr3[1] == "31")
-  {
+  else if(arr3[1] == "31"){
     img3.setAttribute("src", "Pictures/calendar_31.png");
     img3.setAttribute("alt","31");
   }
   document.getElementById("right-container-section-3").appendChild(img3);
   /*Putting the EVENTS3 onto the screen*/
-
   eventContent3.appendChild(document.createTextNode(qs("events3")));
   document.getElementById("right-container-section-3").appendChild(eventContent3);
 }
-function backgroundMonthPictures() {
-
 }
 /*End of show the time function*/
 
