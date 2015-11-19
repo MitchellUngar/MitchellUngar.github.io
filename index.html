@@ -12,7 +12,7 @@ To make a youtube video you have to create a fake playlist in the url.
 Then loop it and auto play is.
 add rel=0&autoplay=1&loop=1&playlist=V3oJR5IAMxM after the question mark and
 change V3oJR5IAMxM to whatever the video code is. It will autoplay and
-loop the same video over and over. 
+loop the same video over and over.
 -->
 
 <html>
@@ -50,7 +50,21 @@ loop the same video over and over.
   <form action='buzzboardindex.html' method='get'>
   <div id="main-container">
     <div id="left-container">
-
+      <div id="notification-container">
+        <h1>Notifications</h1>
+        <p>
+          Note 1  <input type='text' name='not1' class='editTitle'/></br>
+          Note 2  <input type='text' name='not2' class='editTitle'/></br>
+          Note 3  <input type='text' name='not3' class='editTitle'/></br>
+          Note 4  <input type='text' name='not4' class='editTitle'/></br>
+          Note 5  <input type='text' name='not5' class='editTitle'/></br>
+          Note 6  <input type='text' name='not6' class='editTitle'/></br>
+          Note 7  <input type='text' name='not7' class='editTitle'/></br>
+          Note 8  <input type='text' name='not9' class='editTitle'/></br>
+          Note 9  <input type='text' name='not8' class='editTitle'/></br>
+          Note 10<input type='text' name='not10' class='editTitle'/>
+        </p>
+      </div>
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="mid-container">
@@ -68,23 +82,19 @@ loop the same video over and over.
         <h3>
           <label>Event 1:</label></br>
         </h3>
-          <p>Title:<input type='text' name='title'/>
-          Date:<input type="text" id="datepicker" name="datepicker" />
-          <textarea name='events' class='textarea'></textarea></p>
+          <p>Title:<input type='text' name='title' class='editTitle'/>
+          Date:<input type="text" id="datepicker" name="datepicker" /></p>
         <h3>
           <label>Event 2:</label></br>
         </h3>
-    <p>Title:<input type='text' name='title2'/>
-        Date:<input type="text" id="datepicker2" name="datepicker2" />
-          <textarea name='events2' class='textarea'></textarea></p>
+    <p>Title:<input type='text' name='title2' class='editTitle'/>
+        Date:<input type="text" id="datepicker2" name="datepicker2" /></p>
         <h3>
           <label>Event 3:</label></br>
         </h3>
-    <p>Title:<input type='text' name='title3'/>
-          Date:<input type="text" id="datepicker3" name="datepicker3" />
-          <textarea name='events3' class='textarea'></textarea></p>
+    <p>Title:<input type='text' name='title3' class='editTitle'/>
+          Date:<input type="text" id="datepicker3" name="datepicker3" /></p>
           <input type='submit'>
-
     </div>
   </div>
   </form>

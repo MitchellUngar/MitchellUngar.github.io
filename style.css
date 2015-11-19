@@ -55,7 +55,18 @@ VERSION: 1.0.4
     height: 675px;
     background-color:rgba(192,192,192,0.6);
 	  float: left;
-    overflow: auto;
+    overflow: hidden;
+}
+#notification-container {
+    margin-left: 25px;
+    background-color:rgba(192,192,192,0.6);
+    width: 525px;
+    height: 425px;
+    overflow: hidden;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 /*CSS Right Container*/
@@ -64,7 +75,7 @@ VERSION: 1.0.4
     border-bottom-right-radius: 25px;
     margin-right: -100px;
    	margin-top: -450px;
-    overflow: auto;
+    overflow: hidden;
     width: 600px;
     height: 675px;
     background-color:rgba(192,192,192,0.6);
@@ -110,7 +121,6 @@ VERSION: 1.0.4
 }
 .eventTitle{
   text-align: center;
-  text-decoration: underline;
 }
 .eventContent{
 
@@ -137,7 +147,30 @@ VERSION: 1.0.4
   float:left;
   margin-left: 2%;
 }
-.rcs{
+.rcs {
   width: 580px;
-  height: 150px;
+  height: 100px;
+}
+.lcs {
+  width: 400px;
+  height: 25px;
+  background-color: blue;
+}
+.LoginForm {
+  font-size:12pt;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  margin-left: 2%;
+}
+.editTitle {
+  width: 300px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+.notifications {
+  margin-left: 2%;
 }

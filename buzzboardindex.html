@@ -66,27 +66,27 @@ style.css
     <div id="main-container">
       <div id="left-container">
         <!--Birthdays and Anniversary's go here!!!!-->
-        <h1>Birthdays and Anniversary's</h1>
+
         <script type="text/javascript" src="read-csv.js"></script>
+        <div id="csvDiv">
             <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
-        <!--INSTRUCTIONS FOR TESTING-->
-        <h2>How to Test!</h2>
-        <p>1.Type Name into Username box</p>
-        <p> 2.Click Login and make sure Username box is Green</p>
-        <p> 3.Open Second tab in browser and repeat 1 & 2</p>
-        <p> 4.Type in opposite tabs username in call box</p>
-        <p>5.Push Call button</p>
-        <p>6.Press F11 to enlarge and unenlarge screen</p>
+        </div>
         <!--Login button and text box-->
+        <h2>Login
         <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
-            <input type="text" name="username" id="username" placeholder="Pick a username!" />
-            <input type="submit" name="login_submit" value="Log In">
+            <input type="text" class="LoginForm" name="username" id="username" placeholder="Pick a username!" />
+            <input type="submit" class="LoginForm" name="login_submit" value="Log In">
         </form>
         <!--Call button and text box-->
+        Call
         <form name="callForm" id="call" action="#" onsubmit="return makeCall(this);">
-            <input type="text" name="number" placeholder="Enter user to dial!" />
-            <input type="submit" value="Call"/>
-        </form>
+            <input type="text" class="LoginForm" name="number" placeholder="Enter user to dial!" />
+            <input type="submit" class="LoginForm" value="Call"/>
+        </form></h2>
+        <h2>Notifications</h2>
+        <div id="notification-container">
+          
+        </div>
       </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
       <div id="mid-container">
@@ -98,9 +98,6 @@ style.css
         <h1 id="lrgTitle">Events</h1>
         <h2 class="eventTitle"></h2>
         <!--Lets you read the URL for variables-->
-        <div id="right-container-section-1" class = "rcs"></div>
-        <div id="right-container-section-2" class = "rcs"></div>
-        <div id="right-container-section-3" class = "rcs"></div>
 
       </div>
 <!--iiiiiiiiiiiiiiiiiiiii BOTTOM CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->

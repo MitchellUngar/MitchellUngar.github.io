@@ -59,26 +59,18 @@ function drawOutput(lines){
 	/*Grabbing the date string by using the integer that DATE gives you*/
 	dateString = monName[date.getMonth()];
 	//Clear previous data
-	document.getElementById("left-container").innerHTML = "";
-	var table = document.createElement("table");
-	/**Creating the birthdayTitle Object*/
-	var birthdayTitle = document.createElement("H1");
-	/*Assigning the className for CSS*/
-	birthdayTitle.className = "birthdayTitle";
-	birthdayTitle.appendChild(document.createTextNode("Birthdays"));
-	/*Add the birthday title to the left container*/
-	document.getElementById("left-container").appendChild(birthdayTitle);
+	document.getElementById("csvDiv").innerHTML = "";
+
 	var ctr = 0;
 	/*Create a row*/
 	for (var i = 0; i < lines.length; i++) {
-		var row = table.insertRow(-1);
+
 		/*Add information into cells in that row*/
 		for (var j = 0; j < lines[j].length; j++) {
       if(lines[i][j] != dateString) {
 				/*Suitable error message*/
       } else {
 				/*Adding all birthdays to each individual row*/
-				var cell = row.insertCell(-1);
 				var firstName = lines[i][0];
 				var lastName = lines[i][1];
 				var birthDay = lines[i][2];
@@ -86,31 +78,16 @@ function drawOutput(lines){
 				var anniversaryDay = lines[i][4];
 				var anniversaryMonth = lines[i][5];
 				var anniveraryYear = lines[i][6];
-				/*Comparing the this month the month in csv file*/
-				if(lines[i][3] == dateString){
-					var birthdayDetails = document.createElement("H4")
-					birthdayDetails.className = "birthdayDetails";
-					birthdayDetails.appendChild(document.createTextNode(firstName + " " + lastName + " " + birthMonth + " " + birthDay));
-					document.getElementById("left-container").appendChild(birthdayDetails);
-					cell.appendChild(document.createTextNode("HAPPY BIRTHDAY:    "));
-				}
       }
-
 		}
 	}
-	var anniversaryTitle = document.createElement("H1");
-	anniversaryTitle.className = "anniversaryTitle";
-	anniversaryTitle.appendChild(document.createTextNode("Anniversaries"));
-	document.getElementById("left-container").appendChild(anniversaryTitle);
-	for (var i = 0; i < lines.length; i++) {
 
-		var row = table.insertRow(-1);
+	for (var i = 0; i < lines.length; i++) {
 		for (var j = 0; j < lines[j].length; j++) {
       if(lines[i][j] != dateString) {
 
       } else {
 
-				var cell = row.insertCell(-1);
 				var firstName = lines[i][0];
 				var lastName = lines[i][1];
 				var birthDay = lines[i][2];
@@ -118,14 +95,6 @@ function drawOutput(lines){
 				var anniversaryDay = lines[i][4];
 				var anniversaryMonth = lines[i][5];
 				var anniveraryYear = lines[i][6];
-
-				if(anniversaryMonth == dateString){
-					var anniversaryDetails = document.createElement("H4");
-					anniversaryDetails.className = "anniversaryDetails";
-					anniversaryDetails.appendChild(document.createTextNode(firstName + " " + lastName + " " + anniversaryMonth + " " + anniversaryDay + " " + anniveraryYear));
-					document.getElementById("left-container").appendChild(anniversaryDetails);
-					
-				}
 
 				if(anniversaryMonth == dateString && anniversaryDay == day){
 
@@ -155,13 +124,45 @@ function drawOutput(lines){
 						annivDiv.appendChild(annivImg);
 
 						var annivInfo = document.createElement("H1");
+						annivInfo.className = "eventTitle";
 						var br = document.createElement("br");
-						annivInfo.className = "anniversaryDetails";
 						annivInfo.appendChild(document.createTextNode("Happy Anniversary!"));
 						annivInfo.appendChild(br);
 						annivInfo.appendChild(document.createTextNode(firstName + " " + lastName));
 
 						annivDiv.appendChild(annivInfo);
+				}
+				if(birthMonth == dateString && birthDay == day){
+
+						ctr++;
+          	var bdivId = 'birthDiv' + ctr;
+						var altImg = 'altBirth' + ctr;
+						//document.getElementById("right-container").appendChild(document.createTextNode(divId));
+
+						var birthDiv = document.createElement('div');
+						birthDiv.className = 'rcs';
+						birthDiv.id = bdivId;
+						document.getElementById("right-container").appendChild(birthDiv);
+
+
+						var birthImg = document.createElement('img');
+						birthImg.setAttribute("height", "100");
+						birthImg.setAttribute("width", "100");
+						birthImg.className = "calIMG";
+
+						birthImg.setAttribute("src", "Pictures/birthday.jpg");
+						birthImg.setAttribute("alt",altImg);
+
+						birthDiv.appendChild(birthImg);
+
+						var birthInfo = document.createElement("H1");
+						var br = document.createElement("br");
+						birthInfo.className = "eventTitle";
+						birthInfo.appendChild(document.createTextNode("Happy Birthday!"));
+						birthInfo.appendChild(br);
+						birthInfo.appendChild(document.createTextNode(firstName + " " + lastName));
+
+						birthDiv.appendChild(birthInfo);
 				}
       }
 
