@@ -1,17 +1,36 @@
+<!--
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!DIGITAL BUZZBOARD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+TITLE: Digital Buzzboard
+AUTHOR: Mitchell Ungar
+DATE: November 20 2015
+VERSION: 1.0.7
+
+NOTE
+Temporary security issues
+-->
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <title>Buzzboard Login</title>
-    <center>
-      <h1>Buzzboard Login</h1>
-    </center>
   </head>
   <body>
-    <center>
-      <input type="text" id="username" placeholder="Username"><br />
-      <input type="password" id="password" placeholder="Password"><br />
-      <input type="button" value="Log On" onClick="login()">
-    </center>
       <script type="text/javascript" src="js/login.js"></script>
+      <div id = "top-div">
+
+      </div>
+      <div id="gradient">
+        <div id="loginDiv">
+          <center>
+            <h1 id="loginTitle">Buzzboard Login</h1>
+            <input type="text" id="username" placeholder=" Username" autocomplete="off"><br/><br/>
+            <input type="password" id="password" placeholder=" Password"><br/><br/>
+            <input type="button" id="loginBtn" value="Log On" onClick="login()">
+          </center>
+        </div>
+      </div>
   </body>
 </html>
