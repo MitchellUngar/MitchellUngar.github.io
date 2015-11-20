@@ -72,7 +72,7 @@ style.css
             <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
         </div>
         <!--Login button and text box-->
-        <h2>Login
+        <h2 class = "LoginFormTitle">Login
         <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
             <input type="text" class="LoginForm" name="username" id="username" placeholder="Pick a username!" />
             <input type="submit" class="LoginForm" name="login_submit" value="Log In">
@@ -83,9 +83,9 @@ style.css
             <input type="text" class="LoginForm" name="number" placeholder="Enter user to dial!" />
             <input type="submit" class="LoginForm" value="Call"/>
         </form></h2>
-        <h2>Notifications</h2>
+        <h1 id = "notTitle">Notifications</h2>
         <div id="notification-container">
-          
+
         </div>
       </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->

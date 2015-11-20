@@ -1,108 +1,17 @@
-<!--
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!DIGITAL BUZZBOARD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-TITLE: Digital Buzzboard
-AUTHOR: Mitchell Ungar
-DATE: November 12 2015
-VERSION: 1.0.4
-
-NOTE
-To make a youtube video you have to create a fake playlist in the url.
-Then loop it and auto play is.
-add rel=0&autoplay=1&loop=1&playlist=V3oJR5IAMxM after the question mark and
-change V3oJR5IAMxM to whatever the video code is. It will autoplay and
-loop the same video over and over.
--->
-
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Benefits By Design Buzzboard</title>
-<script type="text/javascript" src="script.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-<!-- Load jQuery from Google's CDN -->
-   <!-- Load jQuery UI CSS  -->
-   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-
-   <!-- Load jQuery JS -->
-   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-   <!-- Load jQuery UI Main JS  -->
-   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-   <!-- Load SCRIPT.JS which will create datepicker for input field  -->
-   <script src="script.js"></script>
-</head>
-<body id="body2">
-<!--iiiiiiiiiiiiiiiiiiii TOP CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-
-<div id="top-container">
-  <!--BBD LOGO TOP LEFT-->
-  <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
-  <!--Title of the page, TOP MIDDLE-->
-  <img src="Pictures/title.png" alt="title" height="100" width="400" id="title">
-  <!--The Date top right corner-->
-  <h1 id="dtField"></h1>
-  <!--The Time, right below the date-->
-  <h2 id="showTime"></h2>
-</div>
-<!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-  <!--Main div below top div-->
-  <form action='buzzboardindex.html' method='get'>
-  <div id="main-container">
-    <div id="left-container">
-      <div id="notification-container">
-        <h1>Notifications</h1>
-        <p>
-          Note 1  <input type='text' name='not1' class='editTitle'/></br>
-          Note 2  <input type='text' name='not2' class='editTitle'/></br>
-          Note 3  <input type='text' name='not3' class='editTitle'/></br>
-          Note 4  <input type='text' name='not4' class='editTitle'/></br>
-          Note 5  <input type='text' name='not5' class='editTitle'/></br>
-          Note 6  <input type='text' name='not6' class='editTitle'/></br>
-          Note 7  <input type='text' name='not7' class='editTitle'/></br>
-          Note 8  <input type='text' name='not9' class='editTitle'/></br>
-          Note 9  <input type='text' name='not8' class='editTitle'/></br>
-          Note 10<input type='text' name='not10' class='editTitle'/>
-        </p>
-      </div>
-    </div>
-<!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-    <div id="mid-container">
-      <p>Type in Embed Youtube code from site Or leave blank for no video!</br>
-      <input type='text' name='youtubeURL' id="youtubeURL"/></br>
-        Handles 640 width and any height.</br>
-      <h2>rel=0&autoplay=1&loop=1&playlist=V3oJR5IAMxM</h2></br>
-        The bolded code loops the video as well as autoplays it. Place it after the
-        rel=0 and change the playlist code to the whatever the video code is.
-        Should be in the embed line. </p>
-    </div>
-<!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-    <div id="right-container">
-
-        <h3>
-          <label>Event 1:</label></br>
-        </h3>
-          <p>Title:<input type='text' name='title' class='editTitle'/>
-          Date:<input type="text" id="datepicker" name="datepicker" /></p>
-        <h3>
-          <label>Event 2:</label></br>
-        </h3>
-    <p>Title:<input type='text' name='title2' class='editTitle'/>
-        Date:<input type="text" id="datepicker2" name="datepicker2" /></p>
-        <h3>
-          <label>Event 3:</label></br>
-        </h3>
-    <p>Title:<input type='text' name='title3' class='editTitle'/>
-          Date:<input type="text" id="datepicker3" name="datepicker3" /></p>
-          <input type='submit'>
-    </div>
-  </div>
-  </form>
-<!--iiiiiiiiiiiiiiiiiiiii BOTTOM CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-  <div id="bottom-container">
-
-  </div>
-</body>
-
-<!--iiiiiiiiiiiiiiiiiiiiii END iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+  <head>
+    <title>Buzzboard Login</title>
+    <center>
+      <h1>Buzzboard Login</h1>
+    </center>
+  </head>
+  <body>
+    <center>
+      <input type="text" id="username" placeholder="Username"><br />
+      <input type="password" id="password" placeholder="Password"><br />
+      <input type="button" value="Log On" onClick="login()">
+    </center>
+      <script type="text/javascript" src="login.js"></script>
+  </body>
 </html>

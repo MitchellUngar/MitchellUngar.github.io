@@ -148,14 +148,20 @@ function eventHandler() {
 
     var notifcationDiv = document.getElementById("notification-container");
     notifcationDiv.className = "notify";
+
+    var ul = document.createElement("ul");
     for (var i = 0; i < 10; i++) {
       ctr++;
+      var li = document.createElement("li");
+      li.className = "notList";
       var strNotification = "not" + ctr;
       if (qs(strNotification) != "") {
-        var notH3 = document.createElement('H2');
-        notH3.className = 'notifications';
-        notH3.appendChild(document.createTextNode(qs(strNotification)));
-        notifcationDiv.appendChild(notH3);
+
+        //var notH3 = document.createElement('H2');
+        //notH3.className = 'notifications';
+        li.appendChild(document.createTextNode(qs(strNotification)));
+        ul.appendChild(li);
+        notifcationDiv.appendChild(ul);
       }
     }
 
