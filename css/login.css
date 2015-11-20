@@ -8,6 +8,12 @@ body{
   height:100px;
   background-color: black;
 }
+#mid-container {
+  background-color: black;
+  width:600px;
+  margin-right: 550px;
+
+}
 #username {
   font-size: 20px;
   width: 300px;
@@ -62,4 +68,7 @@ margin: 0px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
+}
+.youtubeText {
+  color:white;
 }

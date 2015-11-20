@@ -11,12 +11,12 @@ VERSION: 1.0.7
 #body {
   /*background: url("Pictures/Septemberbg.jpg");*/
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:auto;
 }
 #body2 {
-  background: url("../Pictures/blueBackground.jpg");
+  /*background: url("../Pictures/blueBackground.jpg");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:cover;*/
 }
 /*CSS Middle Container*/
 #mid-container {
@@ -34,7 +34,7 @@ VERSION: 1.0.7
 /*CSS Top Container*/
 #top-container {
     margin: 0px auto;
-    width: 1800px;
+    width: 100%;
     height: 200px;
 }
 /*CSS Bottom Container*/
@@ -117,12 +117,27 @@ VERSION: 1.0.7
 }
 /*The lenght of the youtube embed video box*/
 #youtubeURL {
-  width: 500px;
+  width: 550px;
+  height: 25px;
+  font-size: 18px;
   margin-left: 3%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
 }
 #notTitle {
   text-align: center;
   text-decoration: underline;
+}
+#submit {
+  width:88px;
+  height: 40px;
+  font-size: 20px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
 }
 ul {
     list-style-type: square;
