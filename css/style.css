@@ -14,7 +14,7 @@ VERSION: 1.0.4
   background-size:cover;
 }
 #body2 {
-  background: url("Pictures/blueBackground.jpg");
+  background: url("../Pictures/blueBackground.jpg");
   background-repeat: no-repeat;
   background-size:cover;
 }
