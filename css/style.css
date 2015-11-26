@@ -26,6 +26,13 @@ VERSION: 1.0.7
     width: 650px;
     height: 450px;
 }
+#edit-mid-container {
+  margin-top: 25%;
+  margin-bottom: 25%;
+  margin: 0px auto;
+  width: 650px;
+  height: 450px;
+}
 /*CSS Main Container*/
 #main-container {
     width: 1800px;
@@ -139,10 +146,14 @@ VERSION: 1.0.7
   border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
 }
+#submit:hover{
+  font-size: 22px;
+  width:92px;
+  height:44px;
+}
 ul {
     list-style-type: square;
     list-style-position: inside;
-    background-color:rgba(135,206,250,0.2);
     font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
 
 }
@@ -213,4 +224,7 @@ font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
+}
+.videoExample {
+  color: white;
 }

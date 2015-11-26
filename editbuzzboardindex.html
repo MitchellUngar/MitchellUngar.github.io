@@ -4,8 +4,8 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
-DATE: November 20 2015
-VERSION: 1.0.7
+DATE: November 26 2015
+VERSION: 1.0.8
 
 NOTE
 To make a youtube video you have to create a fake playlist in the url.
@@ -18,11 +18,15 @@ loop the same video over and over.
 <html>
 <head>
 <meta charset="utf-8">
-<title>Benefits By Design Buzzboard</title>
+<!--Tab Title-->
+<title>Benefits By Design Edit Buzzboard</title>
+<!--Icon in tab-->
 <link rel="shortcut icon" type="image/x-ico" href="Pictures/icon.png" />`
+<!--Pulling in Javascript and css-->
 <script type="text/javascript" src="js/script.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/login.css">
+<!--Pulling in Gradiant Colors-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
    <!-- Load jQuery UI CSS  -->
    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
@@ -69,14 +73,22 @@ loop the same video over and over.
       </div>
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-    <div id="mid-container">
+    <div id="edit-mid-container">
       <p class="youtubeText">Type in Embed Youtube code from site Or leave blank for no video!</br>
       <input type='text' name='youtubeURL' id="youtubeURL"/></br>
         Handles 640 width and any height.</br>
-      <h2 class="youtubeText">rel=0&autoplay=1&loop=1&playlist=V3oJR5IAMxM</h2></br>
-        The bolded code loops the video as well as autoplays it. Place it after the
-        rel=0 and change the playlist code to the whatever the video code is.
-        Should be in the embed line. </p>
+      <h3 class="youtubeText">rel=0&autoplay=1&loop=1&playlist=V3oJR5IAMxM</h3></p>
+      <ul class="videoExample">
+        <h2 class="videoExample">Motivational</h2>
+        <li class="videoExample">iframe width="640" height="360" src="https://www.youtube.com/embed/sowtSXudT_8?rel=0&autoplay=1&loop=1&playlist=sowtSXudT_8" frameborder="0" allowfullscreen</iframe></li>
+        <li class="videoExample">iframe width="640" height="360" src="https://www.youtube.com/embed/z5avVsKjNyo?rel=0&autoplay=1&loop=1&playlist=z5avVsKjNyo" frameborder="0" allowfullscreen</iframe></li>
+        <h2>Cute</h2>
+        <li>iframe width="640" height="360" src="https://www.youtube.com/embed/HSxJkKiHXbw?rel=0&autoplay=1&loop=1&playlist=HSxJkKiHXbw" frameborder="0" allowfullscreen></iframe></li>
+        <h2>Funny</h2>
+        <li>iframe width="640" height="360" src="https://www.youtube.com/embed/CB1Pukr0nFQ?rel=0&autoplay=1&loop=1&playlist=CB1Pukr0nFQ" frameborder="0" allowfullscreen></iframe></li>
+        <h2>Calvin and Hobbs</h2>
+        <li>iframe width="640" height="360" src="https://www.youtube.com/embed/fE7nv7BH19Q?rel=0&autoplay=1&loop=1&playlist=fE7nv7BH19Q" frameborder="0" allowfullscreen></iframe></li>
+      </ul>
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="right-container">
@@ -96,7 +108,7 @@ loop the same video over and over.
         </h3>
     <p>Title:<input type='text' name='title3' class='editTitle'/>
           Date:<input type="text" id="datepicker3" class='datepicker' name="datepicker3" autocomplete="off" /></p>
-          <input type='submit' id='submit'>
+          <input type='submit' id='submit' value='Submit'>
     </div>
   </div>
   </form>
