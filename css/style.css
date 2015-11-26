@@ -200,3 +200,17 @@ font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
 .notList {
   font-size: 20px;
 }
+.editTitle:hover {
+  width:311;
+  height:25;
+}
+.datepicker:hover {
+  width:210;
+  height:25;
+}
+.datepicker {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
