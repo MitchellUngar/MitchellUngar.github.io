@@ -3,12 +3,12 @@ MitchellUngar.github.io
 -----------------------
 Getting Started
 ---------------
-*[This site uses github pages, and pubnub to allow webrtc, and DNS servers. 
+* [This site uses github pages, and pubnub to allow webrtc, and DNS servers. 
   Create a new account with pub nub, they will give you a free use for their servers.
   Keep in mind this is not ideal for 24/7 use of the webcam because there is a certain amount of usage 
   you get per month for the webcam.
 
-*[After you have created a account, create a github io page. The page has to be the same
+* [After you have created a account, create a github io page. The page has to be the same
   name as your username, and is not https. So it is not protected, 'DO NOT PUT SENSITIVE INFORMATION'
 
 # Using the Site
