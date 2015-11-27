@@ -69,18 +69,18 @@ while the TURN server keeps the connection running.
 0. Final step is to add the html code that allows you to type in your login name and call name 
    and the buttons that allow it.
 '''html
-        <!--Login button and text box-->
-        <h2 class = "LoginFormTitle">Login
-        <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
-            <input type="text" class="LoginForm" name="username" id="username" placeholder="Pick a username!" autocomplete="off" />
-            <input type="submit" class="LoginForm" name="login_submit" value="Log In">
-        </form>
-        <!--Call button and text box-->
-        Call
-        <form name="callForm" id="call" action="#" onsubmit="return makeCall(this);">
-            <input type="text" class="LoginForm" name="number" placeholder="Enter user to dial!" autocomplete="off" />
-            <input type="submit" class="LoginForm" value="Call"/>
-        </form></h2>
+<!--Login button and text box-->
+ <h2 class = "LoginFormTitle">Login
+ <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
+ <input type="text" class="LoginForm" name="username" id="username" placeholder="Pick a username!" autocomplete="off" />
+ <input type="submit" class="LoginForm" name="login_submit" value="Log In">
+ </form>
+  <!--Call button and text box-->
+   Call
+   <form name="callForm" id="call" action="#" onsubmit="return makeCall(this);">
+   <input type="text" class="LoginForm" name="number" placeholder="Enter user to dial!" autocomplete="off" />
+   <input type="submit" class="LoginForm" value="Call"/>
+ </form></h2>
 '''
 
 # Using the Site
