@@ -31,10 +31,11 @@ live on its own site.
 What pubnub does is gives you a publish key and a subscribe key. These keys allow you to access their
 ICE Servers which contain a STUN and a TURN server. The STUN server allows you to make the connection
 while the TURN server keeps the connection running. 
+
 0. The first thing I would do would be to put a link to the library that pubnub allows you to use in
    the header of your site. 
 
-<script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+<script src="(https://cdn.pubnub.com/pubnub.min.js)">
 
 0. After that you should place the javascript code at the bottom of your page that makes the initial 
    connection.
