@@ -1,4 +1,11 @@
 # MitchellUngar.github.io
+# Getting Started
+
+This site uses github pages, and pubnub to allow webrtc, and DNS servers. 
+Create a new account with pub nub, they will give you a free use for their servers.
+Keep in mind this is not ideal for 24/7 use of the webcam because there is a certain amount of usage 
+you get per month for the webcam.
+
 # Using the Site
 # Editing
 First you have to go to http://mitchellungar.github.io
