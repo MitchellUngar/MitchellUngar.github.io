@@ -39,47 +39,8 @@ while the TURN server keeps the connection running.
 0. After that you should place the javascript code at the bottom of your page that makes the initial 
    connection.
 
-    <script type="text/javascript">
-      /*Creates new video object in vid-box container*/
-      var video_out = document.getElementById("vid-box");
-      /*Using pubnub to grab the publish key and the subscribe key*/
-      function login(form) {
-        var phone = window.phone = PHONE({
-            number        : form.username.value || "Anonymous", // listen on username line else Anonymous
-            publish_key   : 'PUT YOUR PUBLISH KEY HERE!!!!!!!!!!!!',
-            subscribe_key : 'PUT YOUR SUBSCRIBE KEY HERE!!!!!!!!!!',
-        });
-    /*If the connection works with the login text box goes green*/
-        phone.ready(function(){ form.username.style.background="#55ff5b"; });
-        phone.receive(function(session){
-            session.connected(function(session) { video_out.appendChild(session.video); });
-            session.ended(function(session) { video_out.innerHTML=''; });
-        });
-        return false;   // So the form does not submit.
-    }
-    /*Making a new call, if you are not logged in it will warn you*/
-    function makeCall(form){
-        if (!window.phone) alert("Login First!");
-        else phone.dial(form.number.value);
-        return false;
-    }
-    </script>
-
 0. Final step is to add the html code that allows you to type in your login name and call name 
    and the buttons that allow it.
-
-<!--Login button and text box-->
- <h2 class = "LoginFormTitle">Login
- <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
- <input type="text" class="LoginForm" name="username" id="username" placeholder="Pick a username!" autocomplete="off" />
- <input type="submit" class="LoginForm" name="login_submit" value="Log In">
- </form>
-  <!--Call button and text box-->
-   Call
-   <form name="callForm" id="call" action="#" onsubmit="return makeCall(this);">
-   <input type="text" class="LoginForm" name="number" placeholder="Enter user to dial!" autocomplete="off" />
-   <input type="submit" class="LoginForm" value="Call"/>
- </form></h2>
 
 # Using the Site
 
