@@ -1,3 +1,14 @@
+/*
+Author: Mitchell Ungar
+Date: November 27th 2015
+This code deals with the login area of index.html
+NOTE
+People can still get at the info through the debugger, but it will keep most People
+out.
+There are three users. Admin, Jessica, and Julie. So far all do the same job,
+but maybe in the future they might have different jobs and maybe use a database
+to hold values so the can work seperately.
+*/
 function tricky_win_close() {
     window.opener = top;
     window.close();

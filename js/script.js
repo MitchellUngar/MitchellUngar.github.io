@@ -4,8 +4,8 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
-DATE: November 12 2015
-VERSION: 1.0.4
+DATE: November 27 2015
+VERSION: 1.0.9
 
 What this javascript does is allow the webpage display a Date and time that always is running.
 */
@@ -127,6 +127,14 @@ $(document).ready(
       changeMonth: true,//this option for allowing user to select month
       changeYear: true //this option for allowing user to select from year range
     });
+    $( "#datepicker4" ).datepicker({
+      changeMonth: true,//this option for allowing user to select month
+      changeYear: true //this option for allowing user to select from year range
+    });
+    $( "#datepicker5" ).datepicker({
+      changeMonth: true,//this option for allowing user to select month
+      changeYear: true //this option for allowing user to select from year range
+    });
   }
 );
 function eventHandler() {
@@ -144,42 +152,53 @@ function eventHandler() {
     return "";
   }
   function notificationHandler() {
+    //Creating a counter
     var ctr = 0;
-
+    //Creating a new notification division
     var notifcationDiv = document.getElementById("notification-container");
     notifcationDiv.className = "notify";
-
+    //Creating a list object tag
     var ul = document.createElement("ul");
+    //Looping through all the elements creating each notification
     for (var i = 0; i < 10; i++) {
       ctr++;
       var li = document.createElement("li");
       li.className = "notList";
       var strNotification = "not" + ctr;
       if (qs(strNotification) != "") {
-
-        //var notH3 = document.createElement('H2');
-        //notH3.className = 'notifications';
+        //Putting the notification in the li elements
         li.appendChild(document.createTextNode(qs(strNotification)));
+        //Putting the li element into the ul element
         ul.appendChild(li);
+        //Putting the ul element into the div element
         notifcationDiv.appendChild(ul);
+        //As you can see everything just gets added to eachother
+        //to create a new section that cant be changed(static)
       }
     }
 
   }
   function pictureHandler() {
+  //Creating all img elements for events
   var img1 = document.createElement('img');
   var img2 = document.createElement('img');
   var img3 = document.createElement('img');
+  var img4 = document.createElement('img');
+  var img5 = document.createElement('img');
   /*Creating new variables for each title and content piece
   Later work on dynamic with JAVA remotes*/
   var eventTitle1 = document.createElement("H1");
   var eventTitle2 = document.createElement("H1");
   var eventTitle3 = document.createElement("H1");
+  var eventTitle4 = document.createElement("H1");
+  var eventTitle5 = document.createElement("H1");
 
   var eventContent1 = document.createElement("H3");
   var eventContent2 = document.createElement("H3");
   var eventContent3 = document.createElement("H3");
-
+  var eventContent4 = document.createElement("H3");
+  var eventContent5 = document.createElement("H3");
+  //Creating the vidbox youtube element
   document.getElementById("vid-box").innerHTML = qs("youtubeURL");
 
 
@@ -187,15 +206,21 @@ function eventHandler() {
   eventTitle1.className = "eventTitle";
   eventTitle2.className = "eventTitle";
   eventTitle3.className = "eventTitle";
+  eventTitle4.className = "eventTitle";
+  eventTitle5.className = "eventTitle";
 
   eventContent1.className = "eventContent";
   eventContent2.className = "eventContent";
   eventContent3.className = "eventContent";
-
+  eventContent4.className = "eventContent";
+  eventContent5.className = "eventContent";
+  //Grabbing all the values of the datepicker and placing them into an array
   var arr1 = qs("datepicker").split('/');
   var arr2 = qs("datepicker2").split('/');
   var arr3 = qs("datepicker3").split('/');
-
+  var arr4 = qs("datepicker4").split('/');
+  var arr5 = qs("datepicker5").split('/');
+  //Setting all the attributes for each picture
   img1.setAttribute("height", "100");
   img1.setAttribute("width", "100");
   img1.className = "calIMG";
@@ -208,11 +233,18 @@ function eventHandler() {
   img3.setAttribute("width", "100");
   img3.className = "calIMG";
 
+  img4.setAttribute("height", "100");
+  img4.setAttribute("width", "100");
+  img4.className = "calIMG";
+
+  img5.setAttribute("height", "100");
+  img5.setAttribute("width", "100");
+  img5.className = "calIMG";
+
 
 /*All the if statements that handle the day picture for events1*/
 //Creating counter for dynamic pictures
 var ctr = 0;
-
 for (var i = 0; i < 31; i++) {
   //Incrementing Counter for each day
   ctr++;
@@ -228,7 +260,7 @@ for (var i = 0; i < 31; i++) {
     img1.setAttribute("width", "100");
     img1.className = "calIMG";
   }
-
+ //Determining what day each section is.
   if(arr2[1] == strDateIcon1 || arr2[1] == strDateIcon2){
     img2.setAttribute("src", strPictureURL);
     img2.setAttribute("alt",ctr);
@@ -236,7 +268,7 @@ for (var i = 0; i < 31; i++) {
     img2.setAttribute("width", "100");
     img2.className = "calIMG";
   }
-
+ //Determining what day each section is.
   if(arr3[1] == strDateIcon1 || arr3[1] == strDateIcon2){
     img3.setAttribute("src", strPictureURL);
     img3.setAttribute("alt",ctr);
@@ -244,8 +276,25 @@ for (var i = 0; i < 31; i++) {
     img3.setAttribute("width", "100");
     img3.className = "calIMG";
   }
+  //Determining what day each section is.
+  if(arr4[1] == strDateIcon1 || arr4[1] == strDateIcon2){
+    img4.setAttribute("src", strPictureURL);
+    img4.setAttribute("alt",ctr);
+    img4.setAttribute("height", "100");
+    img4.setAttribute("width", "100");
+    img4.className = "calIMG";
+  }
+  //Determining what day each section is.
+  if(arr5[1] == strDateIcon1 || arr5[1] == strDateIcon2){
+    img5.setAttribute("src", strPictureURL);
+    img5.setAttribute("alt",ctr);
+    img5.setAttribute("height", "100");
+    img5.setAttribute("width", "100");
+    img5.className = "calIMG";
+  }
 }
 var ctr2 = 0;
+//Creating element if there is data
 if (qs("title") != "") {
   ctr2++;
   var e1divId = 'event1Div' + ctr2;
@@ -257,6 +306,7 @@ if (qs("title") != "") {
   event1Div.appendChild(img1);
   event1Div.appendChild(eventTitle1);
 }
+//Creating element if there is data
 var ctr3 = 0;
 if (qs("title2") != "") {
   ctr3++;
@@ -269,6 +319,7 @@ if (qs("title2") != "") {
   event2Div.appendChild(img2);
   event2Div.appendChild(eventTitle2);
 }
+//Creating element if there is data
 var ctr4 = 0;
 if (qs("title3") != "") {
   ctr4++;
@@ -281,11 +332,38 @@ if (qs("title3") != "") {
   eventTitle3.appendChild(document.createTextNode(qs("title3")));
   event3Div.appendChild(img3);
   event3Div.appendChild(eventTitle3);
-  //event3Div.appendChild(document.createTextNode(qs("events3")));
-  //event3Div.appendChild(eventContent3);
+}
+//Creating element if there is data
+var ctr5 = 0;
+if (qs("title4") != "") {
+  ctr5++;
+  var e4divId = 'event1Div' + ctr5;
+  var event4Div = document.createElement('div');
+  event4Div.className = 'rcs';
+  event4Div.id = e4divId;
+  document.getElementById("right-container").appendChild(event4Div);
+  /*Putting the TITLE1 and DATE1 onto the screen*/
+  eventTitle4.appendChild(document.createTextNode(qs("title4")));
+  event4Div.appendChild(img4);
+  event4Div.appendChild(eventTitle4);
+}
+//Creating element if there is data
+var ctr6 = 0;
+if (qs("title5") != "") {
+  ctr6++;
+  var e5divId = 'event1Div' + ctr6;
+  var event5Div = document.createElement('div');
+  event5Div.className = 'rcs';
+  event5Div.id = e5divId;
+  document.getElementById("right-container").appendChild(event5Div);
+  /*Putting the TITLE1 and DATE1 onto the screen*/
+  eventTitle5.appendChild(document.createTextNode(qs("title5")));
+  event5Div.appendChild(img5);
+  event5Div.appendChild(eventTitle5);
 }
 
 }
+//Calling handler so they happen when the screen loads
 notificationHandler();
 pictureHandler();
 }
@@ -350,6 +428,23 @@ function resumeDiv() {
 	ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
   PreviousScrollTop2 = DivElmnt2.scrollTop;
 	ScrollInterval2    = setInterval('scrollDiv()', ScrollRate);
+}
+
+window.exportData = function exportData() {
+  var not1 = document.getElementById('n1');
+  var not2 = document.getElementById('n2');
+  var not3 = document.getElementById('n3');
+  var not4 = document.getElementById('n4');
+  var not5 = document.getElementById('n5');
+  var not6 = document.getElementById('n6');
+  var not7 = document.getElementById('n7');
+  var not8 = document.getElementById('n8');
+  var not9 = document.getElementById('n9');
+  var not10 = document.getElementById('n10');
+
+  var data = [[not1.value],[not2.value],[not3.value],[not4.value],[not5.value],[not6.value],[not7.value],[not8.value],[not9.value],[not10.value]];
+
+    alasql("SELECT * INTO CSV('buzzboardData.csv') FROM ?",[data]);
 }
 /*End of show the time function*/
 
