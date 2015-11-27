@@ -28,7 +28,6 @@ function login() {
 
   if(user.value == coruser) {
     if(pass.value == corpass){
-      window.alert("You are logged in as " + user.value);
       tricky_win_close();
       window.open("editbuzzboardindex.html");
     }
@@ -36,7 +35,6 @@ function login() {
 
   if(user.value == coruser3) {
     if(pass.value == corpass3){
-      window.alert("You are logged in as " + user.value);
       tricky_win_close();
       window.open("editbuzzboardindex.html");
     }
@@ -44,7 +42,6 @@ function login() {
 
   if(user.value == coruser2) {
     if(pass.value == corpass2){
-      window.alert("You are logged in as " + user.value);
       tricky_win_close();
       window.open("editbuzzboardindex.html");
 
