@@ -45,10 +45,6 @@ function login() {
       tricky_win_close();
       window.open("editbuzzboardindex.html");
 
-    } else {
-      window.alert("Incorrect username or password");
     }
-  } else {
-    window.alert("Incorrect username or password");
   }
 }
