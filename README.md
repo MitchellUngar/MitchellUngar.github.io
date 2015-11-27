@@ -10,8 +10,8 @@ Getting Started
 
 * After you have created a account, create a github io page. The page has to be the same
   name as your username, and is not https. So it is not protected, 
-  '''
-  DO NOT PUT SENSITIVE INFORMATION
+  '''ruby
+  DO NOT PUT SENSITIVE INFORMATION!!!
   '''
 
 * Once both of these steps are finished you are free to create a simple website. Copy the repo you just 
@@ -23,7 +23,7 @@ Getting Started
   http://username.github.io into your URL and go into your new published website.(Page should say
   'hello world'
 
-Using WEBTRC
+Using WEBRTC
 ------------
 Pubnub is a great resource for getting yourself up and running with WEBRTC. A lot of people used to go
 towards node.js for it but their libraries are slowly disappearing and making it harder to make is a 
