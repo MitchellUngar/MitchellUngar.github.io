@@ -8,10 +8,11 @@ you get per month for the webcam.
 
 # Using the Site
 # Editing
-First you have to go to http://mitchellungar.github.io
-Second sign in using your privledges.
-After that you can now do the edits that you want to do.
-Add a couple notifications, or events, maybe even a youtube embed.
+0. Go to http://mitchellungar.github.io
+0. Sign in using your privledges.
+0. Do the edits that you want to do.
+0. Add a couple notifications, or events, maybe even a youtube embed.
+---------------------------------------------------------------------
 If you want the video to loop the rel=0 code is already there, just 
 copy paste the embed code to loop the video, and change the seemingly
 random letters and numbers in the playlist area. 
