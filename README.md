@@ -3,13 +3,22 @@ MitchellUngar.github.io
 -----------------------
 Getting Started
 ---------------
-* [This site uses github pages, and pubnub to allow webrtc, and DNS servers. 
+* This site uses github pages, and pubnub to allow webrtc, and DNS servers. 
   Create a new account with pub nub, they will give you a free use for their servers.
   Keep in mind this is not ideal for 24/7 use of the webcam because there is a certain amount of usage 
   you get per month for the webcam.
 
-* [After you have created a account, create a github io page. The page has to be the same
-  name as your username, and is not https. So it is not protected, 'DO NOT PUT SENSITIVE INFORMATION'
+* After you have created a account, create a github io page. The page has to be the same
+  name as your username, and is not https. So it is not protected, '''DO NOT PUT SENSITIVE INFORMATION'''
+
+* Once both of these steps are finished you are free to create a simple website. Copy the repo you just 
+  created on your desktop and add a index.html file. Create a simple website that says 'hello world'
+  just to make sure your github io is working. 
+
+* After the simple html page is created push it back up to your repo and then you will see your github
+  has been updated. If all steps have been followed correctly then you will be able to type in 
+  http://username.github.io into your URL and go into your new published website.(Page should say
+  'hello world'
 
 # Using the Site
 
