@@ -33,13 +33,12 @@ ICE Servers which contain a STUN and a TURN server. The STUN server allows you t
 while the TURN server keeps the connection running. 
 0. The first thing I would do would be to put a link to the library that pubnub allows you to use in
    the header of your site. 
-'''html
+
 <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
 
-'''
 0. After that you should place the javascript code at the bottom of your page that makes the initial 
    connection.
-'''javascript
+
     <script type="text/javascript">
       /*Creates new video object in vid-box container*/
       var video_out = document.getElementById("vid-box");
@@ -65,10 +64,10 @@ while the TURN server keeps the connection running.
         return false;
     }
     </script>
-'''
+
 0. Final step is to add the html code that allows you to type in your login name and call name 
    and the buttons that allow it.
-'''html
+
 <!--Login button and text box-->
  <h2 class = "LoginFormTitle">Login
  <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
@@ -81,7 +80,6 @@ while the TURN server keeps the connection running.
    <input type="text" class="LoginForm" name="number" placeholder="Enter user to dial!" autocomplete="off" />
    <input type="submit" class="LoginForm" value="Call"/>
  </form></h2>
-'''
 
 # Using the Site
 
