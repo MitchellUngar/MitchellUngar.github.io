@@ -5,7 +5,7 @@
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
 DATE: November 27 2015
-VERSION: 1.0.9
+VERSION: 2.0.0
 
 NOTE
 To make a youtube video you have to create a fake playlist in the url.
@@ -41,20 +41,17 @@ loop the same video over and over.
 </head>
 <body id="gradient">
 <!--iiiiiiiiiiiiiiiiiiii TOP CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-
+<form action='buzzboardindex.html' method='get'>
 <div id="top-container">
   <!--BBD LOGO TOP LEFT-->
   <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
   <!--Title of the page, TOP MIDDLE-->
   <img src="Pictures/title.png" alt="title" height="125" width="600" id="title">
-  <!--The Date top right corner-->
-  <h1 id="dtField"></h1>
-  <!--The Time, right below the date-->
-  <h2 id="showTime"></h2>
+
 </div>
 <!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
   <!--Main div below top div-->
-  <form action='buzzboardindex.html' method='get'>
+
   <div id="main-container">
     <div id="left-container">
       <div id="notification-container">
@@ -74,8 +71,11 @@ loop the same video over and over.
         </p>
         <button onclick="window.exportData()" id="exportData">Export Notifications To CSV</button></br>
         <input type="file" id="csvFileInput2" onchange="handleFiles(this.files)" accept=".csv" value='Load Notifications'>
-
       </div>
+      <h3>Change Background Picture:</br>
+      <input type="file" id="backgroundButton" name="backgroundButton"></h3>
+      <h3>Change Title Picture:</br>
+      <input type="file" id="titleButton" name="titleButton"></h3>
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="edit-mid-container">
@@ -88,8 +88,8 @@ loop the same video over and over.
       <ul class="videoExample">
         <div id="motDiv">
           <h2 class="videoExample">Motivational</h2>
-          <li class="videoExample">iframe width="640" height="360" src="https://www.youtube.com/embed/sowtSXudT_8?rel=0&autoplay=1&loop=1&playlist=sowtSXudT_8" frameborder="0" allowfullscreen></iframe></li>
-          <li class="videoExample">iframe width="640" height="360" src="https://www.youtube.com/embed/z5avVsKjNyo?rel=0&autoplay=1&loop=1&playlist=z5avVsKjNyo" frameborder="0" allowfullscreen></iframe></li>
+          <li class="videoExample">iframe width="640" height="360" src="https://www.youtube.com/embed/sowtSXudT_8?rel=0&autoplay=1&loop=1&playlist=sowtSXudT_8" frameborder="0" allowfullscreen</iframe></li>
+          <li class="videoExample">iframe width="640" height="360" src="https://www.youtube.com/embed/z5avVsKjNyo?rel=0&autoplay=1&loop=1&playlist=z5avVsKjNyo" frameborder="0" allowfullscreen</iframe></li>
         </div>
         <div id="cuteDiv">
           <h2>Cute</h2>
@@ -107,6 +107,9 @@ loop the same video over and over.
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="right-container">
+      <p>Send me the picture and I will put it in the folder to be able to be used.
+      This way you can just call opon them anytime, and you don't need to have the
+      pictures on your computer, it will instead be on the cloud.</p>
       <!--Event Area Name the event, then choose the date-->
         <h3>
           <label class=editTitleText>Event 1:</label></br>

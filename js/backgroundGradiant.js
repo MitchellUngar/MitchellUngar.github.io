@@ -1,4 +1,8 @@
-
+/*
+Author: Mitchell Ungar
+Date: November 27th 2015
+This code deals with the color background shift look
+*/
 var colors = new Array(
   [62,35,255],
   [60,255,60],

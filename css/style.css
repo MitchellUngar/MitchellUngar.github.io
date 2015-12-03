@@ -5,13 +5,16 @@
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
 DATE: November 27 2015
-VERSION: 1.0.9
+VERSION: 2.0.0
 */
 /*CSS Body*/
 #body {
   /*background: url("Pictures/Septemberbg.jpg");*/
-  background-repeat: no-repeat;
-  background-size:auto;
+  background-repeat: space;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 #body2 {
   /*background: url("../Pictures/blueBackground.jpg");
@@ -35,23 +38,14 @@ VERSION: 1.0.9
 }
 /*CSS Main Container*/
 #main-container {
-    width: 1800px;
-    height: 675px;
+    width: 100%;
+    height: 100%;
 }
 /*CSS Top Container*/
 #top-container {
     margin: 0px auto;
     width: 100%;
     height: 200px;
-}
-/*CSS Bottom Container*/
-#bottom-container {
-  /*
-    margin: 0px auto;
-    width: 1800px;
-    height: 150px;
-    background: #CCC;
-    opacity:0.7;*/
 }
 /*CSS Left Container*/
 #left-container {
@@ -80,7 +74,7 @@ VERSION: 1.0.9
 #right-container {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    margin-right: -100px;
+    margin-right: 15px;
    	margin-top: -450px;
     overflow: hidden;
     width: 600px;
@@ -92,7 +86,7 @@ VERSION: 1.0.9
 #vid-box {
     height: 400;
     width: 500;
-    margin-left: 50px;
+    margin-left: 0px;
 }
 /*CSS Top Title ("Benefits By Design")*/
 #title {
@@ -116,6 +110,18 @@ VERSION: 1.0.9
     font-size: 250%;
     color: #FEE526;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+#titleName {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+#imgType {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
 }
 /*Benefits By Design Title*/
 #lrgTitle {
@@ -183,6 +189,11 @@ VERSION: 1.0.9
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 
+}
+#titleText {
+  float:right;
+  margin-top: -70px;
+  margin-right: 300px;
 }
 ul {
     list-style-type: square;

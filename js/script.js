@@ -5,7 +5,7 @@
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
 DATE: November 27 2015
-VERSION: 1.0.9
+VERSION: 2.0.0
 
 What this javascript does is allow the webpage display a Date and time that always is running.
 */
@@ -67,7 +67,8 @@ function initDate() {
      z.src = "Pictures/Decemberbg.jpg";
    }
    /*Adds the month to the listing and shows new background*/
-   document.body.background= z.src;
+   //document.body.background= z.src;
+   document.getElementById('body').background = z.src;
 }
 /*End of Date Function*/
 /*Beginning of showTheTime function*/
@@ -361,11 +362,38 @@ if (qs("title5") != "") {
   event5Div.appendChild(img5);
   event5Div.appendChild(eventTitle5);
 }
+}
+function titlePicture() {
+
+/*
+  if(qs('titleName') != ""){
+    var strTitlePicture = "Pictures/" + qs('titleName') + "." + (qs('imgType'));
+    console.log(qs('titleName'));
+    console.log(qs('imgType'));
+    console.log(strTitlePicture);
+    titlePic.setAttribute("src",strTitlePicture);
+  }else {
+    titlePic.setAttribute("src","Pictures/title.png");
+  }
+*/
+if(qs("titleButton")!=""){
+  var titlePic = document.getElementById('title');
+  titlePic.src = "Pictures/" + qs("titleButton");
+}
+}
+function chooseBackgroundPicture() {
+  if(qs("backgroundButton")!=""){
+    var z = new Image();
+    z.src = "Pictures/" + qs("backgroundButton");
+    document.getElementById('body').background = z.src;
+  }
 
 }
 //Calling handler so they happen when the screen loads
 notificationHandler();
 pictureHandler();
+titlePicture();
+chooseBackgroundPicture();
 }
 ScrollRate = 175;
 
