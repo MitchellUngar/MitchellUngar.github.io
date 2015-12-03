@@ -365,21 +365,13 @@ if (qs("title5") != "") {
 }
 function titlePicture() {
 
-/*
-  if(qs('titleName') != ""){
-    var strTitlePicture = "Pictures/" + qs('titleName') + "." + (qs('imgType'));
-    console.log(qs('titleName'));
-    console.log(qs('imgType'));
-    console.log(strTitlePicture);
-    titlePic.setAttribute("src",strTitlePicture);
-  }else {
-    titlePic.setAttribute("src","Pictures/title.png");
-  }
-*/
+var titlePic = document.getElementById('title');
+titlePic.setAttribute("src","Pictures/title.png");
 if(qs("titleButton")!=""){
-  var titlePic = document.getElementById('title');
+
   titlePic.src = "Pictures/" + qs("titleButton");
 }
+
 }
 function chooseBackgroundPicture() {
   if(qs("backgroundButton")!=""){

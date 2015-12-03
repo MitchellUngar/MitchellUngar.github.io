@@ -94,23 +94,11 @@ Detailed Specs:
 ---------------
 Main Page
 ---------
-Login: Under 25 characters
-Call: Under 25 characters
-Notifications: Under 50 characters
-Events: Under 35 characters
-Title Picture: size 125 x 600
-Background Picture: More then 1800 x 675 
-Youtube Video:
-Webcam Video:
-BBD Logo:
-Dates and Times:
-
-Edit Page
----------
-Notifications:
-Events:
-Title Picture:
-Background Picture:
-Youtube Video:
-BBD Logo:
-Dates and Times:
+* Login: Under 25 characters
+* Call: Under 25 characters
+* Notifications: Under 50 characters
+* Events: Under 35 characters
+* Title Picture: size 125 x 600
+* Background Picture: More then 1800 x 675
+* Youtube Video: 640xAnyHeight
+* Webcam Video: 640x360
