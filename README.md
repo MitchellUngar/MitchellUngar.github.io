@@ -3,42 +3,39 @@ MitchellUngar.github.io
 -----------------------
 Getting Started
 ---------------
-* This site uses github pages, and pubnub to allow webrtc, and DNS servers. 
-  Create a new account with pub nub, they will give you a free use for their servers.
-  Keep in mind this is not ideal for 24/7 use of the webcam because there is a certain amount of usage 
+* This site uses github pages, and pubnub to allow webrtc, and DNS servers.
+  Create a new account with pubnub, they will give you a free use for their servers.
+  Keep in mind this is not ideal for 24/7 use of the webcam because there is a certain amount of usage
   you get per month for the webcam.
 
 * After you have created a account, create a github io page. The page has to be the same
-  name as your username, and is not https. So it is not protected, 
-  '''ruby
-  DO NOT PUT SENSITIVE INFORMATION!!!
-  '''
+  name as your username, and is not https. So it is not protected, DO NOT PUT SENSITIVE INFORMATION!!!
 
-* Once both of these steps are finished you are free to create a simple website. Copy the repo you just 
+* Once both of these steps are finished you are free to create a simple website. Copy the repo you just
   created on your desktop and add a index.html file. Create a simple website that says 'hello world'
-  just to make sure your github io is working. 
+  just to make sure your github io is working.
 
 * After the simple html page is created push it back up to your repo and then you will see your github
-  has been updated. If all steps have been followed correctly then you will be able to type in 
+  has been updated. If all steps have been followed correctly then you will be able to type in
   http://username.github.io into your URL and go into your new published website.(Page should say
   'hello world'
 
 Using WEBRTC
 ------------
 Pubnub is a great resource for getting yourself up and running with WEBRTC. A lot of people used to go
-towards node.js for it but their libraries are slowly disappearing and making it harder to make is a 
-live on its own site. 
+towards node.js for it but their libraries are slowly disappearing and making it harder to make is a
+live on its own site.
 What pubnub does is gives you a publish key and a subscribe key. These keys allow you to access their
 ICE Servers which contain a STUN and a TURN server. The STUN server allows you to make the connection
-while the TURN server keeps the connection running. 
+while the TURN server keeps the connection running.
 
 0. The first thing I would do would be to put a link to the library that pubnub allows you to use in
-   the header of your site. 
+   the header of your site.
 
-0. After that you should place the javascript code at the bottom of your page that makes the initial 
+0. After that you should place the javascript code at the bottom of your page that makes the initial
    connection.
 
-0. Final step is to add the html code that allows you to type in your login name and call name 
+0. Final step is to add the html code that allows you to type in your login name and call name
    and the buttons that allow it.
 
 # Using the Site
@@ -50,13 +47,13 @@ Editing
 0. Do the edits that you want to do.
 0. Add a couple notifications, or events, maybe even a youtube embed.
 
-If you want the video to loop the rel=0 code is already there, just 
+If you want the video to loop the rel=0 code is already there, just
 copy paste the embed code to loop the video, and change the seemingly
-random letters and numbers in the playlist area. 
-You can save to a .csv file for your notifications, or load from a 
+random letters and numbers in the playlist area.
+You can save to a .csv file for your notifications, or load from a
 preexisting file. The load doesn't have to be from a .csv file, it can
-be a text file from notepad. 
-Submit and move to the next page. 
+be a text file from notepad.
+Submit and move to the next page.
 
 Webcam Conference
 -----------------
@@ -71,5 +68,49 @@ Publishing the site
 0. git commit -m'Whatever changes you made'
 0. git push -u origin master
 0. Username
-0. Password 
+0. Password
 
+Specification Sheet
+-------------------
+0. When using webRTC you have to be using Google Chrome, Mozilla Firefox, or Opera.
+0. If you are not using the webcam you may use any browser you want.
+0. When making a call be sure to know exactly what login name that they used. If you don't then you can't make a connection.
+0. If the computer or browser is using a safety block add-on be sure to turn it off or the site wont work due to it being http.
+0. For logging in, if you have forgot your password come to me and I can change it to whatever you need.
+0. When it comes to the notification area, I made the lengths of the textboxes to the same size of the divs. So if it doesn't have to be big, don't make it be.
+0. For the title the height is 125px by 600px. This will stay the same and be able to be changed for later use.
+0. Background pictures are autogenerated but I will add a feature for you to upload them.
+0. There is a text limit to the URL since that is what switches information between pages. But with typing a lot of information I still haven't reached it's max.
+0. You may have to zoom in or out to fit the page depending on the screen.
+0. When choosing a date it will always delete everytime you visit the edit page. This is so that there is no problems when double clicking the event box.
+0. When Naming an event it is preferably below 35 characters, but it can go over.
+0. The excel file that loads in the data, I changed it's layout so it is easier to add people to it.
+0. You can load in data from a csv, or text file for the notifications. It just reads each line as a new notification.
+0. The largest dimension of background picture is 2048x1254. It just fits the size of the div.
+0. Mininum size for background picture is 1800x675 because that is the size of the full div.
+0. Make sure the day clock is correct. Most of the program uses that information.
+
+Detailed Specs:
+---------------
+Main Page
+---------
+Login: Under 25 characters
+Call: Under 25 characters
+Notifications: Under 50 characters
+Events: Under 35 characters
+Title Picture: size 125 x 600
+Background Picture: More then 1800 x 675 
+Youtube Video:
+Webcam Video:
+BBD Logo:
+Dates and Times:
+
+Edit Page
+---------
+Notifications:
+Events:
+Title Picture:
+Background Picture:
+Youtube Video:
+BBD Logo:
+Dates and Times:
