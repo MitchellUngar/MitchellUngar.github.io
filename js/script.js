@@ -381,11 +381,32 @@ function chooseBackgroundPicture() {
   }
 
 }
+function twitter() {
+  //This is the twitter widget customized to be put into the div only when the user chooses to
+  //And when there are no notifications to be said.
+  //If statement decides whether or not it should create the twitter feed
+  if(qs("not1") == "" && qs("not2") == "" && qs("not3") == "" && qs("not4") == "" && qs("not5") == "" && qs("not6") == "" && qs("not7") == "" &&  qs("not8") == "" && qs("not9") == "" && qs("not10") == "" && qs("twitterSwitch") == "On"){
+  //The element by id is customized as well. everything displays where the <a> tag is
+  //So instead of having a static <a> tag I am using a dynamic one where I can place it
+  //in any div I choose by using its id.
+    document.getElementById("notification-container").innerHTML = "<a class='twitter-timeline' href='https://twitter.com/bbdcanada'  data-chrome='noscrollbar nofooter noborders noheader' data-widget-id='672834180640718848'>Tweets by @bbdcanada</a>";
+  //The rest is what twitter gave me for the widget that I got off their site.
+  var js,fjs=document.getElementsByTagName("script")[0],
+      p=/^http:/.test(document.location)?'http':'https';
+  if(!document.getElementById("twitter-wjs")){
+    js=document.createElement("script");
+    js.id="twitter-wjs";js.src=p+"://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}
+}
 //Calling handler so they happen when the screen loads
+twitter();
 notificationHandler();
 pictureHandler();
 titlePicture();
 chooseBackgroundPicture();
+
 }
 ScrollRate = 175;
 
@@ -465,7 +486,10 @@ window.exportData = function exportData() {
   var data = [[not1.value],[not2.value],[not3.value],[not4.value],[not5.value],[not6.value],[not7.value],[not8.value],[not9.value],[not10.value]];
 
     alasql("SELECT * INTO CSV('buzzboardData.csv') FROM ?",[data]);
+
 }
+
+
 /*End of show the time function*/
 
 /*Javascript isn't smart enough to have two window.onload functions being used

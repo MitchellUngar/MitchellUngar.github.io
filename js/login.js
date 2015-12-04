@@ -5,13 +5,13 @@ This code deals with the login area of index.html
 NOTE
 People can still get at the info through the debugger, but it will keep most People
 out.
-There are three users. Admin, Jessica, and Julie. So far all do the same job,
+There are four users. Admin, Jessica, Kurt, and Julie. So far all do the same job,
 but maybe in the future they might have different jobs and maybe use a database
 to hold values so the can work seperately.
 */
 function tricky_win_close() {
-    window.opener = top;
     window.close();
+    window.opener = top;
 }
 function login() {
   var user = document.getElementById('username');
@@ -26,6 +26,9 @@ function login() {
   var coruser3 = "Julie";
   var corpass3 = "EJulie";
 
+  var coruser3 = "Kurt";
+  var corpass3 = "KKurt";
+
   if(user.value == coruser) {
     if(pass.value == corpass){
       tricky_win_close();
@@ -35,6 +38,12 @@ function login() {
 
   if(user.value == coruser3) {
     if(pass.value == corpass3){
+      tricky_win_close();
+      window.open("editbuzzboardindex.html");
+    }
+  }
+  if(user.value == coruser4) {
+    if(pass.value == corpass4){
       tricky_win_close();
       window.open("editbuzzboardindex.html");
     }
