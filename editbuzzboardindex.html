@@ -46,8 +46,10 @@ loop the same video over and over.
   <!--BBD LOGO TOP LEFT-->
   <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
   <!--Title of the page, TOP MIDDLE-->
-  <img src="Pictures/title.png" alt="title" height="125" width="600" id="title">
-
+  <!--<img src="Pictures/title.png" alt="title" height="125" width="600" id="title">-->
+  <center>
+    <p>Title:<input type='text' name='titleHeader' id="editTitleHeader"/></br>
+  </center>
 </div>
 <!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
   <!--Main div below top div-->
@@ -55,7 +57,7 @@ loop the same video over and over.
     <div id="left-container">
       <div id="notification-container" onloadeddata="enableDisable(this.checked)">
       <h3>  <input type="checkbox" name="twitterSwitch" value="On" id="twitterSwitch" onclick="enableDisable(this.checked)"> Use Twitter as Notification</h3>
-      <script language="javascript">
+      <!--<script language="javascript">
       function enableDisable(bEnable)
       {
           document.getElementById('n1').disabled = bEnable
@@ -71,8 +73,8 @@ loop the same video over and over.
       }
       </script>
         <h1>Notifications</h1>
-        <p>
-          <!--All the notifcations you can enter-->
+        <p>-->
+          <!--All the notifcations you can enter
           Note 1  <input type='text' name='not1' class='editTitle' id='n1' autocomplete="off"/></br>
           Note 2  <input type='text' name='not2' class='editTitle' id='n2' autocomplete="off"/></br>
           Note 3  <input type='text' name='not3' class='editTitle' id='n3' autocomplete="off"/></br>
@@ -85,16 +87,16 @@ loop the same video over and over.
           Note 10<input type='text' name='not10' class='editTitle' id='n10' autocomplete="off"/>
         </p>
         <button onclick="window.exportData()" id="exportData">Export Notifications To CSV</button></br>
-        <input type="file" id="csvFileInput2" onchange="handleFiles(this.files)" accept=".csv" value='Load Notifications'>
+        <input type="file" id="csvFileInput2" onchange="handleFiles(this.files)" accept=".csv" value='Load Notifications'>-->
       </div>
-      <h3>Change Background Picture:</br>
+      <!--<h3>Change Background Picture:</br>
       <input type="file" id="backgroundButton" name="backgroundButton"></h3>
       <h3>Change Title Picture:</br>
       <input type="file" id="titleButton" name="titleButton"></h3>
       <p>Send me the picture and I will put it in the folder to be able to be used.
          I will place it up onto the server, and you will have a copy of the pictures
          to choose from. That way the names are always correct, and the server does
-         all of the work</p>
+         all of the work</p>-->
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="edit-mid-container">
@@ -108,23 +110,23 @@ loop the same video over and over.
         <!--Motivational Example Div-->
         <div id="motDiv">
           <h2 class="videoExample">Motivational</h2>
-          <li class="videoExample">iframe width="640" height="360" src="https://www.youtube.com/embed/sowtSXudT_8?rel=0&autoplay=1&loop=1&playlist=sowtSXudT_8" frameborder="0" allowfullscreen</iframe></li>
-          <li class="videoExample">iframe width="640" height="360" src="https://www.youtube.com/embed/z5avVsKjNyo?rel=0&autoplay=1&loop=1&playlist=z5avVsKjNyo" frameborder="0" allowfullscreen</iframe></li>
+          <li class="videoExample">sowtSXudT_8
+          <li class="videoExample">z5avVsKjNyo
         </div>
         <!--Cute Example Div-->
         <div id="cuteDiv">
           <h2>Cute</h2>
-          <li>iframe width="640" height="360" src="https://www.youtube.com/embed/HSxJkKiHXbw?rel=0&autoplay=1&loop=1&playlist=HSxJkKiHXbw" frameborder="0" allowfullscreen></iframe></li>
+          <li>HSxJkKiHXbw
         </div>
         <!--Funny Example Div-->
         <div id="funnyDiv">
           <h2>Funny</h2>
-          <li>iframe width="640" height="360" src="https://www.youtube.com/embed/CB1Pukr0nFQ?rel=0&autoplay=1&loop=1&playlist=CB1Pukr0nFQ" frameborder="0" allowfullscreen></iframe></li>
+          <li>CB1Pukr0nFQ
         </div>
         <!--Calvin and Hobbs Div-->
         <div id="CalvHobbsDiv">
           <h2>Calvin and Hobbs</h2>
-          <li>iframe width="640" height="360" src="https://www.youtube.com/embed/fE7nv7BH19Q?rel=0&autoplay=1&loop=1&playlist=fE7nv7BH19Q" frameborder="0" allowfullscreen></iframe></li>
+          <li>fE7nv7BH19Q
         </div>
       </ul>
     </div>

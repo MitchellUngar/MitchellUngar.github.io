@@ -152,6 +152,54 @@ function eventHandler() {
     }
     return "";
   }
+
+    var videos = qs("youtubeURL");
+    console.log(videos);
+    // create youtube player
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('vid-box', {
+          height: '600',
+          width: '640',
+          videoId: videos,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+    }
+
+    // autoplay video
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // when video ends
+    function onPlayerStateChange(event) {
+        if(event.data === 0) {
+            //alert(playerSwitch());
+            document.getElementById('mid-container').innerHTML = "";
+            document.getElementById('mid-container').innerHTML = "<div id='player'></div><div id='vid-box'></div>";
+            document.getElementById('mid-container').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=3&b=0&p=5&sb=off" allowtransparency="true" id="instagram-frame" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:615px; height: 615px" ></iframe> <!-- websta - websta.me -->';
+            setTimeout(switchDisp,20000);
+        }
+    }
+
+
+    function switchDisp(){
+      document.getElementById('mid-container').innerHTML = "";
+      document.getElementById('mid-container').innerHTML = "<div id='player'></div><div id='vid-box'></div>";
+      player = new YT.Player('vid-box', {
+        height: '600',
+        width: '640',
+        videoId: videos,
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
   function notificationHandler() {
     //Creating a counter
     var ctr = 0;
@@ -364,21 +412,23 @@ if (qs("title5") != "") {
 }
 }
 function titlePicture() {
+var titleInfo = qs("titleHeader");
+var titleLabel = document.getElementById("titleLabel")
+titleLabel.innerHTML = titleInfo;
+//var titlePic = document.getElementById('title');
+//titlePic.setAttribute("src","Pictures/title.png");
+//if(qs("titleButton")!=""){
 
-var titlePic = document.getElementById('title');
-titlePic.setAttribute("src","Pictures/title.png");
-if(qs("titleButton")!=""){
-
-  titlePic.src = "Pictures/" + qs("titleButton");
-}
+  //titlePic.src = "Pictures/" + qs("titleButton");
+//}
 
 }
 function chooseBackgroundPicture() {
-  if(qs("backgroundButton")!=""){
-    var z = new Image();
-    z.src = "Pictures/" + qs("backgroundButton");
-    document.getElementById('body').background = z.src;
-  }
+  //if(qs("backgroundButton")!=""){
+  //  var z = new Image();
+  //  z.src = "Pictures/" + qs("backgroundButton");
+  //  document.getElementById('body').background = z.src;
+  //}
 
 }
 function twitter() {
@@ -402,13 +452,15 @@ function twitter() {
   }
 }
 }
+
+
 //Calling handler so they happen when the screen loads
 twitter();
 notificationHandler();
 pictureHandler();
 titlePicture();
-chooseBackgroundPicture();
-
+//chooseBackgroundPicture();
+onYouTubePlayerAPIReady();
 }
 ScrollRate = 175;
 

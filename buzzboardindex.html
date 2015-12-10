@@ -51,6 +51,8 @@ style.css
     <script type="text/javascript" src="js/script.js"></script>
     <!--Keeps all the DIV's in the right spot, as well as organizes the video area-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="http://www.youtube.com/player_api"></script>
   </head>
   <body id="body">
 <!--iiiiiiiiiiiiiiiiiiii TOP CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
@@ -59,11 +61,12 @@ style.css
       <!--BBD LOGO TOP LEFT-->
       <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
       <!--Title of the page, TOP MIDDLE-->
-      <img alt="title" height="125" width="600" id="title">
+      <!--<img alt="title" height="125" width="600" id="title">-->
+      <label id='titleLabel'>I Am HERRRERERERERERERER</label>
       <!--The Date top right corner-->
       <h1 id="dtField"></h1>
       <!--The Time, right below the date-->
-      <h2 id="showTime"></h2>
+      <h1 id="showTime"></h1>
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <!--Main div below top div-->
@@ -90,7 +93,11 @@ style.css
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
       <div id="mid-container">
         <!--Video Div for new video to be created in-->
+
+        <div id="player"></div>
+
         <div id="vid-box"></div>
+
       </div>
 <!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
       <div id="right-container">
