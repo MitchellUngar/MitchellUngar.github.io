@@ -156,7 +156,7 @@ function eventHandler() {
     //Creating a counter
     var ctr = 0;
     //Creating a new notification division
-    var notifcationDiv = document.getElementById("notification-container");
+    var notifcationDiv = document.getElementById("left-container");
     notifcationDiv.className = "notify";
     //Creating a list object tag
     var ul = document.createElement("ul");
@@ -382,6 +382,7 @@ function chooseBackgroundPicture() {
 
 }
 function twitter() {
+  var notificationTwitter = document.getElementById('left-container');
   //This is the twitter widget customized to be put into the div only when the user chooses to
   //And when there are no notifications to be said.
   //If statement decides whether or not it should create the twitter feed
@@ -389,11 +390,12 @@ function twitter() {
   //The element by id is customized as well. everything displays where the <a> tag is
   //So instead of having a static <a> tag I am using a dynamic one where I can place it
   //in any div I choose by using its id.
-    document.getElementById("notification-container").innerHTML = "<a class='twitter-timeline' href='https://twitter.com/bbdcanada'  data-chrome='noscrollbar nofooter noborders noheader' data-widget-id='672834180640718848'>Tweets by @bbdcanada</a>";
+    document.getElementById("left-container").innerHTML = "<a class='twitter-timeline' href='https://twitter.com/bbdcanada' data-chrome='noscrollbar nofooter noborders noheader' data-widget-id='672834180640718848'>Tweets by @bbdcanada</a>";
   //The rest is what twitter gave me for the widget that I got off their site.
   var js,fjs=document.getElementsByTagName("script")[0],
       p=/^http:/.test(document.location)?'http':'https';
   if(!document.getElementById("twitter-wjs")){
+
     js=document.createElement("script");
     js.id="twitter-wjs";js.src=p+"://platform.twitter.com/widgets.js";
     fjs.parentNode.insertBefore(js,fjs);
@@ -421,7 +423,7 @@ function scrollDiv_init() {
 	ScrollInterval = setInterval('scrollDiv()', ScrollRate);
 
   //iiiiiiiiiiiiiiiiiiiiiiiiii Left Container iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-  DivElmnt2 = document.getElementById('notification-container');
+  DivElmnt2 = document.getElementById('left-container');
   ReachedMaxScroll2 = false;
 
   DivElmnt2.scrollTop = 0;

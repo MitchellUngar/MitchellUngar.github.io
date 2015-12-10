@@ -26,8 +26,8 @@ function login() {
   var coruser3 = "Julie";
   var corpass3 = "EJulie";
 
-  var coruser3 = "Kurt";
-  var corpass3 = "KKurt";
+  var coruser4 = "Kurt";
+  var corpass4 = "KKurt";
 
   if(user.value == coruser) {
     if(pass.value == corpass){
@@ -35,7 +35,13 @@ function login() {
       window.open("editbuzzboardindex.html");
     }
   }
+  if(user.value == coruser2) {
+    if(pass.value == corpass2){
+      tricky_win_close();
+      window.open("editbuzzboardindex.html");
 
+    }
+  }
   if(user.value == coruser3) {
     if(pass.value == corpass3){
       tricky_win_close();
@@ -49,11 +55,5 @@ function login() {
     }
   }
 
-  if(user.value == coruser2) {
-    if(pass.value == corpass2){
-      tricky_win_close();
-      window.open("editbuzzboardindex.html");
 
-    }
-  }
 }

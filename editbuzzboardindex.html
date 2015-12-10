@@ -53,21 +53,36 @@ loop the same video over and over.
   <!--Main div below top div-->
   <div id="main-container">
     <div id="left-container">
-      <div id="notification-container">
-      <h3>  <input type="checkbox" name="twitterSwitch" value="On" id="twitterSwitch"> Use Twitter as Notification</h3>
+      <div id="notification-container" onloadeddata="enableDisable(this.checked)">
+      <h3>  <input type="checkbox" name="twitterSwitch" value="On" id="twitterSwitch" onclick="enableDisable(this.checked)"> Use Twitter as Notification</h3>
+      <script language="javascript">
+      function enableDisable(bEnable)
+      {
+          document.getElementById('n1').disabled = bEnable
+          document.getElementById('n2').disabled = bEnable
+          document.getElementById('n3').disabled = bEnable
+          document.getElementById('n4').disabled = bEnable
+          document.getElementById('n5').disabled = bEnable
+          document.getElementById('n6').disabled = bEnable
+          document.getElementById('n7').disabled = bEnable
+          document.getElementById('n8').disabled = bEnable
+          document.getElementById('n9').disabled = bEnable
+          document.getElementById('n10').disabled = bEnable
+      }
+      </script>
         <h1>Notifications</h1>
         <p>
           <!--All the notifcations you can enter-->
-          Note 1  <input type='text' name='not1' class='editTitle' id='n1'/></br>
-          Note 2  <input type='text' name='not2' class='editTitle' id='n2'/></br>
-          Note 3  <input type='text' name='not3' class='editTitle' id='n3'/></br>
-          Note 4  <input type='text' name='not4' class='editTitle' id='n4'/></br>
-          Note 5  <input type='text' name='not5' class='editTitle' id='n5'/></br>
-          Note 6  <input type='text' name='not6' class='editTitle' id='n6'/></br>
-          Note 7  <input type='text' name='not7' class='editTitle' id='n7'/></br>
-          Note 8  <input type='text' name='not9' class='editTitle' id='n8'/></br>
-          Note 9  <input type='text' name='not8' class='editTitle' id='n9'/></br>
-          Note 10<input type='text' name='not10' class='editTitle' id='n10'/>
+          Note 1  <input type='text' name='not1' class='editTitle' id='n1' autocomplete="off"/></br>
+          Note 2  <input type='text' name='not2' class='editTitle' id='n2' autocomplete="off"/></br>
+          Note 3  <input type='text' name='not3' class='editTitle' id='n3' autocomplete="off"/></br>
+          Note 4  <input type='text' name='not4' class='editTitle' id='n4' autocomplete="off"/></br>
+          Note 5  <input type='text' name='not5' class='editTitle' id='n5' autocomplete="off"/></br>
+          Note 6  <input type='text' name='not6' class='editTitle' id='n6' autocomplete="off"/></br>
+          Note 7  <input type='text' name='not7' class='editTitle' id='n7' autocomplete="off"/></br>
+          Note 8  <input type='text' name='not9' class='editTitle' id='n8' autocomplete="off"/></br>
+          Note 9  <input type='text' name='not8' class='editTitle' id='n9' autocomplete="off"/></br>
+          Note 10<input type='text' name='not10' class='editTitle' id='n10' autocomplete="off"/>
         </p>
         <button onclick="window.exportData()" id="exportData">Export Notifications To CSV</button></br>
         <input type="file" id="csvFileInput2" onchange="handleFiles(this.files)" accept=".csv" value='Load Notifications'>

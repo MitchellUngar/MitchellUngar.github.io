@@ -51,8 +51,8 @@ VERSION: 2.0.0
 #left-container {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    margin-left: 0px;
-    width: 600px;
+    margin-left: 50px;
+    width: 500px;
     height: 675px;
     background-color:rgba(192,192,192,0.6);
 	  float: left;
@@ -61,7 +61,7 @@ VERSION: 2.0.0
 #notification-container {
     margin-left: 25px;
     background-color:rgba(192,192,192,0.6);
-    width: 525px;
+    width: 520px;
     height: 425px;
     overflow: hidden;
     border-top-right-radius: 25px;
@@ -74,7 +74,7 @@ VERSION: 2.0.0
 #right-container {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    margin-right: 15px;
+    margin-right: 65px;
    	margin-top: -450px;
     overflow: hidden;
     width: 600px;
@@ -86,7 +86,7 @@ VERSION: 2.0.0
 #vid-box {
     height: 400;
     width: 500;
-    margin-left: 0px;
+    margin-left: -55px;
 }
 /*CSS Top Title ("Benefits By Design")*/
 #title {
