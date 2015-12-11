@@ -180,95 +180,18 @@ function eventHandler() {
             //alert(playerSwitch());
             document.getElementById('mid-container').innerHTML = "";
             document.getElementById('mid-container').innerHTML = "<div id='player'></div><div id='vid-box'></div>";
-
-            var cpo = []; cpo["_object"] ="mid-container"; cpo["_fid"] = "AoKADK9sHlOq";
-            var _cpmp = _cpmp || []; _cpmp.push(cpo);
-            (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-            cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-            var c = document.getElementsByTagName("script")[0];
-            c.parentNode.insertBefore(cp, c); })();
-            document.getElementById('mid-container').innerHTML = ('<noscript>'
-              +    'Powered by Cincopa <a href="http://www.cincopa.com/video-hosting">Video Hosting for Business</a>'
-              +    'solution.<span>BBDBuzzboard</span>'
-              +    '<span>originaldate</span>'
-              +    '<span> 1/1/0001 6:00:00 AM</span>'
-              +    '<span>width</span>'
-              +    '<span> 7175</span>'
-              +    '<span>height</span>'
-              +    '<span> 6943</span>'
-              +    '<span>originaldate</span>'
-              +    '<span> 1/1/0001 6:00:00 AM</span>'
-              +    '<span>width</span>'
-              +    '<span>height</span>'
-              +    '<span> 320</span>'
-              +    '<span>originaldate</span>'
-              +    '<span> 320</span>'
-              +    '<span> 1/1/0001 6:00:00 AM</span>'
-              +    '<span>width</span>'
-              +    '<span> 209</span>'
-              +    '<span>height</span>'
-              +    '<span> 120</span>'
-              +    '<span>originaldate</span>'
-              +    '<span> 1/1/0001 6:00:00 AM</span>'
-              +    '<span>originaldate</span>'
-              +    '<span> 1/1/0001 6:00:00 AM</span>'
-              +    '<span> 204</span>'
-              +    '<span>width</span>'
-              +    '<span>height</span>'
-              +    '<span> 204</span>'
-              +    '<span>originaldate</span>'
-              +    '<span> 1/1/0001 6:00:00 AM</span>'
-              +    '<span>width</span>'
-              +    '<span>height</span>'
-              +    '<span> 683</span>'
-              +    '<span>cameramake</span>'
-              +    '<span> 103</span>'
-              +    '<span> SAMSUNG</span>'
-              +    '<span>orientation</span>'
-              +    '<span> 6</span>'
-              +    '<span>height</span>'
-              +    '<span> 4128</span>'
-              +    '<span> I337MVLUFNI2</span>'
-              +    '<span>camerasoftware</span>'
-              +    '<span>originaldate</span>'
-              +    '<span> 1/23/2015 3:47:49 PM</span>'
-              +    '<span>width</span>'
-              +    '<span> 2322</span>'
-              +    '<span> SGH-I337M</span>'
-              +    '<span>cameramodel</span>'
-              +    '<span>cameramake</span>'
-              +    '<span> SAMSUNG</span>'
-              +    '<span>orientation</span>'
-              +    '<span> 6</span>'
-              +    '<span>height</span>'
-              +    '<span> 4128</span>'
-              +    '<span>camerasoftware</span>'
-              +    '<span> I337MVLUFNI2</span>'
-              +    '<span>originaldate</span>'
-              +    '<span> 1/28/2015 6:30:42 AM</span>'
-              +    '<span>width</span>'
-              +    '<span> 2322</span>'
-              +    '<span> SGH-I337M</span>'
-              +    '<span>cameramodel</span>'
-              +    '<span>cameramake</span>'
-              +    '<span> samsung</span>'
-              +    '<span>orientation</span>'
-              +    '<span> 6</span>'
-              +    '<span> 4128</span>'
-              +    '<span>height</span>'
-              +    '<span> I337MVLUGOH1</span>'
-              +    '<span>originaldate</span>'
-              +    '<span>camerasoftware</span>'
-              +    '<span> 10/24/2015 12:16:04 AM</span>'
-              +    '<span>width</span>'
-              +    '<span> 2322</span>'
-              +    '<span>cameramodel</span>'
-              +    '<span> SGH-I337M</span>'
-              +    '</noscript>');
-
-            //document.getElementById('mid-container').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=3&b=0&p=5&sb=off" allowtransparency="true" id="instagram-frame" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:615px; height: 615px" ></iframe> <!-- websta - websta.me -->';
-
-            setTimeout(switchDisp,20000);
+            if(qs("radioInstagram") == "slideshow"){
+              //SnapWidget
+              document.getElementById('mid-container').innerHTML = '<iframe src="http://snapwidget.com/sc/?u=YmJkY2FuYWRhfGlufDY0MHwzfDN8fHllc3wyMHxub25lfG9uU3RhcnR8eWVzfG5v&ve=111215" id="instagram-frame" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:640px; height:640px"></iframe>';
+              setTimeout(switchDisp,70000);
+            }
+            if(qs("radioInstagram") == "tile"){
+              document.getElementById('mid-container').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=3&b=0&p=5&sb=off" allowtransparency="true" id="instagram-frame" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:615px; height: 615px" ></iframe> <!-- websta - websta.me -->';
+              setTimeout(switchDisp,70000);
+            }
+            if(qs("radioInstagram") == "none"){
+            switchDisp();
+            }
         }
     }
 
@@ -523,7 +446,7 @@ function twitter() {
   //This is the twitter widget customized to be put into the div only when the user chooses to
   //And when there are no notifications to be said.
   //If statement decides whether or not it should create the twitter feed
-  if(qs("not1") == "" && qs("not2") == "" && qs("not3") == "" && qs("not4") == "" && qs("not5") == "" && qs("not6") == "" && qs("not7") == "" &&  qs("not8") == "" && qs("not9") == "" && qs("not10") == "" && qs("twitterSwitch") == "On"){
+  if(qs("twitterSwitch") == "On"){
   //The element by id is customized as well. everything displays where the <a> tag is
   //So instead of having a static <a> tag I am using a dynamic one where I can place it
   //in any div I choose by using its id.
