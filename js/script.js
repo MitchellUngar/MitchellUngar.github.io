@@ -180,7 +180,13 @@ function eventHandler() {
             //alert(playerSwitch());
             document.getElementById('mid-container').innerHTML = "";
             document.getElementById('mid-container').innerHTML = "<div id='player'></div><div id='vid-box'></div>";
-            document.getElementById('mid-container').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=3&b=0&p=5&sb=off" allowtransparency="true" id="instagram-frame" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:615px; height: 615px" ></iframe> <!-- websta - websta.me -->';
+            var cpo = []; cpo["_object"] ="mid-container"; cpo["_fid"] = "AoKADK9sHlOq";
+            var _cpmp = _cpmp || []; _cpmp.push(cpo);
+            (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+            cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+            var c = document.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(cp, c); })();
+            //document.getElementById('mid-container').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=3&b=0&p=5&sb=off" allowtransparency="true" id="instagram-frame" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:615px; height: 615px" ></iframe> <!-- websta - websta.me -->';
             setTimeout(switchDisp,20000);
         }
     }
