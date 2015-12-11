@@ -85,9 +85,15 @@ VERSION: 2.0.0
 }
 /*CSS Video Container(Around the Webcam video)*/
 #vid-box {
-    height: 400;
-    width: 500;
+    height: 600;
+    width: 600;
     margin-left: -55px;
+}
+#titleTop {
+  width: 800px;
+  margin-left: 25%;
+  margin-top: -108px;
+  text-align: center;
 }
 #instagram-frame {
   margin-left: -45px;
@@ -95,11 +101,10 @@ VERSION: 2.0.0
 }
 /*CSS Top Title ("Benefits By Design")*/
 #titleLabel {
-    margin-left: 19%;
-    margin-right:25%;
-    font-size:400%;
+    font-size:350%;
     color: #FEE526;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
 }
 /*The field that holds the Date(Helped with script.js)*/
 #dtField {
@@ -194,7 +199,6 @@ VERSION: 2.0.0
 }
 #cuteDiv {
   background-color: rgba(248, 108, 108, 0.6);
-
 }
 #funnyDiv {
   background-color: rgba(2, 252, 119, 0.6);
