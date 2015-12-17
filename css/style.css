@@ -11,106 +11,133 @@ VERSION: 2.0.0
 #body {
   /*background: url("Pictures/Septemberbg.jpg");*/
   background-repeat: space;
-  background-size: cover;
+  background-size:contain;
   width: 100%;
-  height: 100%;
+  height: 98%;
   overflow-x: hidden;
-}
-#body2 {
-  /*background: url("../Pictures/blueBackground.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;*/
+  overflow-y: hidden;
 }
 /*CSS Middle Container*/
 #mid-container {
-    margin-top: 25%;
+    /*margin-top: 25%;*/
     margin-bottom: 25%;
-    margin: 0px auto;
-    width: 650px;
-    height: 450px;
+    float:left;
+    /*margin: 0px auto;*/
+    /*margin-left: 30.0%;/*570px / 1900px*/
+    /*margin-top: 0px;*/
+    width: 34.21052631578947%;/*650px / 1900px*/
+    height: 700px;/*450px / 700px*/
+    margin-left: 3%;
 }
 #edit-mid-container {
-  margin-top: 25%;
+  /*margin-top: 25%;*/
   margin-bottom: 25%;
-  margin: 0px auto;
-  margin-left: 570px;
-  width: 550px;
-  height: 450px;
+  float:left;
+  /*margin: 0px auto;*/
+  /*margin-left: 30.0%;/*570px / 1900px*/
+  /*margin-top: 0px;*/
+  width: 34.21052631578947%;/*650px / 1900px*/
+  height: 700px;/*450px / 700px*/
+  margin-left: 3%;
 }
 /*CSS Main Container*/
 #main-container {
-    width: 100%;
-    height: 100%;
+    width: 98%;/*1900px*/
+    height: 1000px;/*700px*/
+    margin: auto;
 }
 /*CSS Top Container*/
 #top-container {
-    margin: 0px auto;
+    /*margin: 0px auto;*/
     width: 100%;
-    height: 200px;
+    height: 200px;/*200px/700px*/
 }
 /*CSS Left Container*/
 #left-container {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    margin-left: 50px;
-    width: 500px;
-    height: 675px;
+    /*margin-left: 02.63157894736842%;/*50px / 1900px*/
+    width: 26.31578947368421%; /*500px / 1900px*/
+    max-width: 550px;
+    height: 700px;/*675px / 700px*/
+	  float: left;
+    overflow: hidden;
+}
+/*CSS Left Container*/
+#left-container-2 {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    /*margin-left: 02.63157894736842%;/*50px / 1900px*/
+    width: 26.31578947368421%; /*500px / 1900px*/
+    height: 700px;/*675px / 700px*/
     background-color:rgba(192,192,192,0.6);
 	  float: left;
     overflow: hidden;
 }
-#notification-container {
-    margin-left: 25px;
-    background-color:rgba(192,192,192,0.6);
-    width: 520px;
-    height: 425px;
-    overflow: hidden;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px;
-}
-
 /*CSS Right Container*/
 #right-container {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    margin-right: 65px;
-   	margin-top: -450px;
+    /*margin-right: 03.42105263157895%; 65px/1900px*/
+    margin-bottom: 500.26315789473684%;/*-1183px / 1900px*/
     overflow: hidden;
-    width: 600px;
-    height: 675px;
+    width: 31.57894736842105%;/*600px / 1900px*/
+    height: 700px;/*675px 700px */
     background-color:rgba(192,192,192,0.6);
+    /*margin-left: 65.78947368421053%;/*1270px/1900px*/
 	  float: right;
+    margin-right: 1%;
+}
+/*CSS Right Container*/
+#right-container-2 {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  /*margin-right: 03.42105263157895%; 65px/1900px*/
+  margin-bottom: 500.26315789473684%;/*-1183px / 1900px*/
+  overflow: hidden;
+  width: 31.57894736842105%;/*600px / 1900px*/
+  height: 700px;/*675px 700px */
+  background-color:rgba(192,192,192,0.6);
+  /*margin-left: 65.78947368421053%;/*1270px/1900px*/
+  float: right;
+  margin-right: 1%;
 }
 /*CSS Video Container(Around the Webcam video)*/
 #vid-box {
-    height: 600;
-    width: 600;
-    margin-left: -55px;
+    height: 400px;
+    width: 100%;
+    /*margin-left: -55px;*/
+}
+#vid-box-2 {
+    height: 400px;
+    width: 100%;
+    /*margin-left: -55px;*/
 }
 #titleTop {
   width: 800px;
-  margin-left: 25%;
+  margin-right: 9%;
   margin-top: -108px;
   text-align: center;
 }
 #instagram-frame {
-  margin-left: -45px;
+  /*margin-left: -45px;*/
+  width:100%;
+  height:100%;
   overflow-y: hidden;
+  float:left;
+  margin-left: 2.5%;
 }
 /*CSS Top Title ("Benefits By Design")*/
 #titleLabel {
     font-size:350%;
     color: #FEE526;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-
 }
 /*The field that holds the Date(Helped with script.js)*/
 #dtField {
     float:right;
-    margin-right:50px;
-    margin-top:-50px;
+    margin-right:02.63157894736842%;/*50px / 1900px*/
+    margin-top: -100px;/*-50px / 200px*/
     font-size: 250%;
     color: #FEE526;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
@@ -118,19 +145,22 @@ VERSION: 2.0.0
 /*The Field that shows the Time(Helped with script.js)*/
 #showTime {
     float:right;
-    margin-right:-335px;
-    margin-top:-100px;
+    margin-right: 6%;/*-335px / 1900px*/
+    margin-top: -40px;
     font-size: 250%;
     color: #FEE526;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 #editTitleHeader{
-  width: 400px;
-  margin-left: -150px;
+  width: 21.05263157894737%;/*400px / 1900px*/
+  margin-left: 21.05263157894737%;/*400px / 1900px*/
+
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
+  border-style: solid;
+  border-color: black;
 }
 #titleName {
   border-top-right-radius: 25px;
@@ -151,7 +181,17 @@ VERSION: 2.0.0
 }
 /*The lenght of the youtube embed video box*/
 #youtubeURL {
-  width: 550px;
+  width: 90%;
+  height: 25px;
+  font-size: 18px;
+  margin-left: 3%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+#youtubeURL2 {
+  width: 90%;
   height: 25px;
   font-size: 18px;
   margin-left: 3%;
@@ -193,18 +233,23 @@ VERSION: 2.0.0
   border-top-left-radius: 25px;
 }
 #motDiv {
+  margin-left: 0%;
+  width: 89.125%;/*500px / 640px*/
   background-color: rgba(80, 140, 250, 0.6);
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
 }
 #cuteDiv {
+  width: 89.125%;/*500px / 640px*/
   background-color: rgba(248, 108, 108, 0.6);
 }
 #funnyDiv {
+  width: 89.125%;/*500px / 640px*/
   background-color: rgba(2, 252, 119, 0.6);
 
 }
 #CalvHobbsDiv {
+  width: 89.125%;/*500px / 640px*/
   background-color: rgba(252, 152, 2, 0.6);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -213,7 +258,7 @@ VERSION: 2.0.0
 #titleText {
   float:right;
   margin-top: -70px;
-  margin-right: 300px;
+  margin-right: 15.78947368421053%;
 }
 #twitterSwitch {
   height: 20px;

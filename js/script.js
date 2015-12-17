@@ -5,7 +5,7 @@
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
 DATE: November 27 2015
-VERSION: 2.0.0
+VERSION: 2.0.1
 
 What this javascript does is allow the webpage display a Date and time that always is running.
 */
@@ -68,6 +68,7 @@ function initDate() {
    }
    /*Adds the month to the listing and shows new background*/
    //document.body.background= z.src;
+
    document.getElementById('body').background = z.src;
 }
 /*End of Date Function*/
@@ -139,6 +140,7 @@ $(document).ready(
   }
 );
 function eventHandler() {
+  //This function grabs values from the URL
   function qs(search_for) {
     var query = window.location.search.substring(1);
     var parms = query.split('&');
@@ -152,7 +154,7 @@ function eventHandler() {
     }
     return "";
   }
-
+    //Displaying what youtube video is going through video
     var videos = qs("youtubeURL");
     console.log(videos);
     // create youtube player
@@ -168,37 +170,39 @@ function eventHandler() {
           }
         });
     }
-
     // autoplay video
     function onPlayerReady(event) {
         event.target.playVideo();
     }
-
     // when video ends
     function onPlayerStateChange(event) {
         if(event.data === 0) {
-            //alert(playerSwitch());
-            document.getElementById('mid-container').innerHTML = "";
-            document.getElementById('mid-container').innerHTML = "<div id='player'></div><div id='vid-box'></div>";
+            //Clear the entire div
+            document.getElementById('vid-area').innerHTML = "";
+            //Recreate Divs
+            document.getElementById('vid-area').innerHTML = "<div id='vid-box'></div>";
             if(qs("radioInstagram") == "slideshow"){
+              //Allowing slideshow to happen
               //SnapWidget
-              document.getElementById('mid-container').innerHTML = '<iframe src="http://snapwidget.com/sc/?u=YmJkY2FuYWRhfGlufDY0MHwzfDN8fHllc3wyMHxub25lfG9uU3RhcnR8eWVzfG5v&ve=111215" id="instagram-frame" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:640px; height:640px"></iframe>';
+              document.getElementById('vid-area').innerHTML = '<iframe src="http://snapwidget.com/sc/?u=YmJkY2FuYWRhfGlufDY0MHwzfDN8fHllc3wyMHxub25lfG9uU3RhcnR8eWVzfG5v&ve=111215" id="instagram-frame" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:600px; height:400px"></iframe>';
               setTimeout(switchDisp,70000);
             }
+            //Allowing tiles to happen
             if(qs("radioInstagram") == "tile"){
-              document.getElementById('mid-container').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=3&b=0&p=5&sb=off" allowtransparency="true" id="instagram-frame" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:615px; height: 615px" ></iframe> <!-- websta - websta.me -->';
-              setTimeout(switchDisp,70000);
+              document.getElementById('vid-area').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=2&b=0&p=5&sb=off" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:615px; height: 410px" ></iframe> <!-- websta - websta.me -->';
+              setTimeout(switchDisp,20000);
             }
+            //Replaying the video at end of video
             if(qs("radioInstagram") == "none"){
             switchDisp();
             }
         }
     }
 
-
     function switchDisp(){
-      document.getElementById('mid-container').innerHTML = "";
-      document.getElementById('mid-container').innerHTML = "<div id='player'></div><div id='vid-box'></div>";
+      //Create new video divs
+      document.getElementById('vid-area').innerHTML = "";
+      document.getElementById('vid-area').innerHTML = "<div id='vid-box'>";
       player = new YT.Player('vid-box', {
         height: '600',
         width: '640',
@@ -209,6 +213,31 @@ function eventHandler() {
         }
       });
     }
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+var player2;
+var videos2 = qs("youtubeURL2");
+function onYouTubePlayerAPIReady2() {
+    player2 = new YT.Player('vid-box-2', {
+      height: '600',
+      width: '640',
+      videoId: videos2,
+      events: {
+        'onReady': onPlayerReady2,
+        'onStateChange': onPlayerStateChange2
+      }
+    });
+}
+// autoplay video
+function onPlayerReady2(event) {
+    event.target.playVideo();
+}
+function onPlayerStateChange2(event) {
+    if(event.data === 0) {
+      onPlayerReady2(event);
+    }
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
   function notificationHandler() {
     //Creating a counter
@@ -425,72 +454,55 @@ function titlePicture() {
 var titleInfo = qs("titleHeader");
 var titleLabel = document.getElementById("titleLabel")
 titleLabel.innerHTML = titleInfo;
-//var titlePic = document.getElementById('title');
-//titlePic.setAttribute("src","Pictures/title.png");
-//if(qs("titleButton")!=""){
-
-  //titlePic.src = "Pictures/" + qs("titleButton");
-//}
-
 }
-function chooseBackgroundPicture() {
-  //if(qs("backgroundButton")!=""){
-  //  var z = new Image();
-  //  z.src = "Pictures/" + qs("backgroundButton");
-  //  document.getElementById('body').background = z.src;
-  //}
 
-}
 function twitter() {
   var notificationTwitter = document.getElementById('left-container');
   //This is the twitter widget customized to be put into the div only when the user chooses to
   //And when there are no notifications to be said.
   //If statement decides whether or not it should create the twitter feed
   if(qs("twitterSwitch") == "On"){
-  //The element by id is customized as well. everything displays where the <a> tag is
-  //So instead of having a static <a> tag I am using a dynamic one where I can place it
-  //in any div I choose by using its id.
-    document.getElementById("left-container").innerHTML = "<a class='twitter-timeline' href='https://twitter.com/bbdcanada' data-chrome='noscrollbar nofooter noborders noheader' data-widget-id='672834180640718848'>Tweets by @bbdcanada</a>";
-  //The rest is what twitter gave me for the widget that I got off their site.
-  var js,fjs=document.getElementsByTagName("script")[0],
+      //The element by id is customized as well. everything displays where the <a> tag is
+      //So instead of having a static <a> tag I am using a dynamic one where I can place it
+      //in any div I choose by using its id.
+      document.getElementById("left-container").innerHTML = "<a class='twitter-timeline' href='https://twitter.com/bbdcanada' data-chrome='noscrollbar nofooter noborders noheader' data-widget-id='672834180640718848'>Tweets by @bbdcanada</a>";
+      //The rest is what twitter gave me for the widget that I got off their site.
+      var js,fjs=document.getElementsByTagName("script")[0],
       p=/^http:/.test(document.location)?'http':'https';
-  if(!document.getElementById("twitter-wjs")){
-
-    js=document.createElement("script");
-    js.id="twitter-wjs";js.src=p+"://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js,fjs);
+      if(!document.getElementById("twitter-wjs")){
+        js=document.createElement("script");
+        js.id="twitter-wjs";js.src=p+"://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js,fjs);
   }
 }
 }
-
-
 //Calling handler so they happen when the screen loads
 twitter();
 notificationHandler();
 pictureHandler();
 titlePicture();
-//chooseBackgroundPicture();
 onYouTubePlayerAPIReady();
+if(qs("radioYoutube") == "yes"){
+  onYouTubePlayerAPIReady2();
+}
+
 }
 ScrollRate = 175;
 
 function scrollDiv_init() {
   //iiiiiiiiiiiiiiiiiiiiiiiiiii Right Container iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+  //Defining Element
 	DivElmnt = document.getElementById('right-container');
 	ReachedMaxScroll = false;
-
 	DivElmnt.scrollTop = 0;
 	PreviousScrollTop  = 0;
-
 	ScrollInterval = setInterval('scrollDiv()', ScrollRate);
-
   //iiiiiiiiiiiiiiiiiiiiiiiiii Left Container iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+  //Defining Element
   DivElmnt2 = document.getElementById('left-container');
   ReachedMaxScroll2 = false;
-
   DivElmnt2.scrollTop = 0;
   PreviousScrollTop2  = 0;
-
   ScrollInterval2 = setInterval('scrollDiv()', ScrollRate);
 }
 
@@ -499,28 +511,24 @@ function scrollDiv() {
 	if (!ReachedMaxScroll) {
 		DivElmnt.scrollTop = PreviousScrollTop;
 		PreviousScrollTop++;
-
 		ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
 	}
 	else {
 		ReachedMaxScroll = (DivElmnt.scrollTop == 0)?false:true;
-
 		DivElmnt.scrollTop = PreviousScrollTop;
 		PreviousScrollTop--;
 	}
 //iiiiiiiiiiiiiiiiiiiiiii Left Container iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-if (!ReachedMaxScroll2) {
-  DivElmnt2.scrollTop = PreviousScrollTop2;
-  PreviousScrollTop2++;
-
-  ReachedMaxScroll2 = DivElmnt2.scrollTop >= (DivElmnt2.scrollHeight - DivElmnt2.offsetHeight);
-}
-else {
-  ReachedMaxScroll2 = (DivElmnt2.scrollTop == 0)?false:true;
-
-  DivElmnt2.scrollTop = PreviousScrollTop2;
-  PreviousScrollTop2--;
-}
+  if (!ReachedMaxScroll2) {
+    DivElmnt2.scrollTop = PreviousScrollTop2;
+    PreviousScrollTop2++;
+    ReachedMaxScroll2 = DivElmnt2.scrollTop >= (DivElmnt2.scrollHeight - DivElmnt2.offsetHeight);
+  }
+  else {
+    ReachedMaxScroll2 = (DivElmnt2.scrollTop == 0)?false:true;
+    DivElmnt2.scrollTop = PreviousScrollTop2;
+    PreviousScrollTop2--;
+  }
 }
 
 function pauseDiv() {
@@ -535,26 +543,6 @@ function resumeDiv() {
 	ScrollInterval2    = setInterval('scrollDiv()', ScrollRate);
 }
 
-window.exportData = function exportData() {
-  var not1 = document.getElementById('n1');
-  var not2 = document.getElementById('n2');
-  var not3 = document.getElementById('n3');
-  var not4 = document.getElementById('n4');
-  var not5 = document.getElementById('n5');
-  var not6 = document.getElementById('n6');
-  var not7 = document.getElementById('n7');
-  var not8 = document.getElementById('n8');
-  var not9 = document.getElementById('n9');
-  var not10 = document.getElementById('n10');
-
-  var data = [[not1.value],[not2.value],[not3.value],[not4.value],[not5.value],[not6.value],[not7.value],[not8.value],[not9.value],[not10.value]];
-
-    alasql("SELECT * INTO CSV('buzzboardData.csv') FROM ?",[data]);
-
-}
-
-
-/*End of show the time function*/
 
 /*Javascript isn't smart enough to have two window.onload functions being used
 So I created a function the runs the other three functions so all I have to do

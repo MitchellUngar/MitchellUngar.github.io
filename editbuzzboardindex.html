@@ -5,7 +5,7 @@
 TITLE: Digital Buzzboard
 AUTHOR: Mitchell Ungar
 DATE: November 27 2015
-VERSION: 2.0.0
+VERSION: 2.0.1
 
 NOTE
 To make a youtube video you have to create a fake playlist in the url.
@@ -47,59 +47,26 @@ loop the same video over and over.
   <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
   <!--Title of the page, TOP MIDDLE-->
   <!--<img src="Pictures/title.png" alt="title" height="125" width="600" id="title">-->
-  <center>
-    <p>Title:<input type='text' name='titleHeader' id="editTitleHeader"/></br>
-  </center>
+      <input type='text' name='titleHeader' id="editTitleHeader"/>
 </div>
 <!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
   <!--Main div below top div-->
   <div id="main-container">
-    <div id="left-container">
+    <div id="left-container-2">
       <div id="notification-container" onloadeddata="enableDisable(this.checked)">
+      <h2>Twitter</h2>
       <h3>  <input type="checkbox" name="twitterSwitch" value="On" id="twitterSwitch"> Use Twitter as Notification</h3>
+      <h2>Instagram</h2>
       <h3>  <input type="radio" name="radioInstagram" value="tile" id="twitterSwitch"> Tile Instagram Feed </br>
             <input type="radio" name="radioInstagram" value="slideshow" id="twitterSwitch"> Slideshow Instagram Feed</br>
             <input type="radio" name="radioInstagram" value="none" id="twitterSwitch" checked="checked" > No Instagram</h3>
-      <!--<script language="javascript">
-      function enableDisable(bEnable)
-      {
-          document.getElementById('n1').disabled = bEnable
-          document.getElementById('n2').disabled = bEnable
-          document.getElementById('n3').disabled = bEnable
-          document.getElementById('n4').disabled = bEnable
-          document.getElementById('n5').disabled = bEnable
-          document.getElementById('n6').disabled = bEnable
-          document.getElementById('n7').disabled = bEnable
-          document.getElementById('n8').disabled = bEnable
-          document.getElementById('n9').disabled = bEnable
-          document.getElementById('n10').disabled = bEnable
-      }
-      </script>
-        <h1>Notifications</h1>
-        <p>-->
-          <!--All the notifcations you can enter
-          Note 1  <input type='text' name='not1' class='editTitle' id='n1' autocomplete="off"/></br>
-          Note 2  <input type='text' name='not2' class='editTitle' id='n2' autocomplete="off"/></br>
-          Note 3  <input type='text' name='not3' class='editTitle' id='n3' autocomplete="off"/></br>
-          Note 4  <input type='text' name='not4' class='editTitle' id='n4' autocomplete="off"/></br>
-          Note 5  <input type='text' name='not5' class='editTitle' id='n5' autocomplete="off"/></br>
-          Note 6  <input type='text' name='not6' class='editTitle' id='n6' autocomplete="off"/></br>
-          Note 7  <input type='text' name='not7' class='editTitle' id='n7' autocomplete="off"/></br>
-          Note 8  <input type='text' name='not9' class='editTitle' id='n8' autocomplete="off"/></br>
-          Note 9  <input type='text' name='not8' class='editTitle' id='n9' autocomplete="off"/></br>
-          Note 10<input type='text' name='not10' class='editTitle' id='n10' autocomplete="off"/>
-        </p>
-        <button onclick="window.exportData()" id="exportData">Export Notifications To CSV</button></br>
-        <input type="file" id="csvFileInput2" onchange="handleFiles(this.files)" accept=".csv" value='Load Notifications'>-->
+      <h2>Youtube Video 2</h2>
+      <h3>  <input type="radio" name="radioYoutube" value="yes" id="twitterSwitch" checked="checked">Yes </br>
+            <input type="radio" name="radioYoutube" value="no" id="twitterSwitch"> No<h3>
+      <h2>Enter Youtube Code</h2>
+      <input type='text' name='youtubeURL2' id="youtubeURL2"/></br>
+
       </div>
-      <!--<h3>Change Background Picture:</br>
-      <input type="file" id="backgroundButton" name="backgroundButton"></h3>
-      <h3>Change Title Picture:</br>
-      <input type="file" id="titleButton" name="titleButton"></h3>
-      <p>Send me the picture and I will put it in the folder to be able to be used.
-         I will place it up onto the server, and you will have a copy of the pictures
-         to choose from. That way the names are always correct, and the server does
-         all of the work</p>-->
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="edit-mid-container">
@@ -134,29 +101,34 @@ loop the same video over and over.
       </ul>
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-    <div id="right-container">
+    <div id="right-container-2">
       <!--Event Area Name the event, then choose the date-->
         <h3>
+          <!--Event 1-->
           <label class=editTitleText>Event 1:</label></br>
         </h3>
           <p>Title:<input type='text' name='title' class='editTitle'/></br>
           Date:<input type="text" id="datepicker" class='datepicker' name="datepicker" autocomplete="off" /></p>
         <h3>
+          <!--Event 2-->
           <label class=editTitleText>Event 2:</label></br>
         </h3>
     <p>Title:<input type='text' name='title2' class='editTitle'/></br>
         Date:<input type="text" id="datepicker2" class='datepicker' name="datepicker2" autocomplete="off" /></p>
         <h3>
+          <!--Event 3-->
           <label class=editTitleText>Event 3:</label></br>
         </h3>
     <p>Title:<input type='text' name='title3' class='editTitle'/></br>
           Date:<input type="text" id="datepicker3" class='datepicker' name="datepicker3" autocomplete="off" /></p>
           <h3>
+            <!--Event 4-->
             <label class=editTitleText>Event 4:</label></br>
           </h3>
     <p>Title:<input type='text' name='title4' class='editTitle'/></br>
           Date:<input type="text" id="datepicker4" class='datepicker' name="datepicker4" autocomplete="off" /></p>
           <h3>
+            <!--Event 5-->
             <label class=editTitleText>Event 5:</label></br>
           </h3>
     <p>Title:<input type='text' name='title5' class='editTitle'/></br>
