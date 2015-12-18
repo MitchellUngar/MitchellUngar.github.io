@@ -68,6 +68,8 @@ function initDate() {
    }
    /*Adds the month to the listing and shows new background*/
    //document.body.background= z.src;
+   z.setAttribute("width","100%");
+   z.setAttribute("height",'100%');
 
    document.getElementById('body').background = z.src;
 }

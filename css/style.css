@@ -8,14 +8,12 @@ DATE: November 27 2015
 VERSION: 2.0.0
 */
 /*CSS Body*/
-#body {
-  /*background: url("Pictures/Septemberbg.jpg");*/
-  background-repeat: space;
-  background-size:contain;
-  width: 100%;
-  height: 98%;
+html, body {
   overflow-x: hidden;
   overflow-y: hidden;
+  width:100%;
+  height:100%;
+  background-size: cover;
 }
 /*CSS Middle Container*/
 #mid-container {
