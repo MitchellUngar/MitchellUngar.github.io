@@ -63,10 +63,12 @@ style.css
         <label id='titleLabel'>Inserting Title...</label>
       </div>
     </center>
+    <div id="date-div">
       <!--The Date top right corner-->
       <h1 id="dtField"></h1>
       <!--The Time, right below the date-->
       <h1 id="showTime"></h1>
+    </div>
     </div>
 <!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <!--Main div below top div-->
@@ -91,6 +93,7 @@ style.css
         <!--Lets you read the URL for variables-->
         <script type="text/javascript" src="js/read-csv.js"></script>
         <div id="csvDiv">
+            <h3>Click to load birthdays and anniversaries</h3>
             <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
         </div>
 

@@ -156,7 +156,7 @@ function eventHandler() {
   }
     //Displaying what youtube video is going through video
     var videos = qs("youtubeURL");
-    console.log(videos);
+    //console.log(videos);
     // create youtube player
     var player;
     function onYouTubePlayerAPIReady() {
@@ -189,7 +189,7 @@ function eventHandler() {
             }
             //Allowing tiles to happen
             if(qs("radioInstagram") == "tile"){
-              document.getElementById('vid-area').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=2&b=0&p=5&sb=off" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:615px; height: 410px" ></iframe> <!-- websta - websta.me -->';
+              document.getElementById('vid-area').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=2&b=0&p=5&sb=off" allowtransparency="true" frameborder="0" scrolling="no" id="instagram-frame" style="border:none;overflow:hidden;width:615px; height: 410px" ></iframe> <!-- websta - websta.me -->';
               setTimeout(switchDisp,20000);
             }
             //Replaying the video at end of video
@@ -481,9 +481,18 @@ twitter();
 notificationHandler();
 pictureHandler();
 titlePicture();
+if(qs("youtube1Switch") == "yes" && qs("youtubeURL") != ""){
 onYouTubePlayerAPIReady();
-if(qs("radioYoutube") == "yes"){
-  onYouTubePlayerAPIReady2();
+}
+if(qs("youtube2Switch") == "yes" && qs("youtubeURL2") != ""){
+  if(qs("youtube1Switch") != "yes"){
+    //Clear the entire div
+    document.getElementById('vid-area').innerHTML = "";
+    onYouTubePlayerAPIReady2();
+  }else{
+    onYouTubePlayerAPIReady2();
+  }
+
 }
 
 }

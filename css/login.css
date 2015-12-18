@@ -17,13 +17,13 @@ body{
 }
 #mid-container {
   background-color: black;
-  width:600px;
+  width:100%;
   margin-right: 550px;
 
 }
 #username {
   font-size: 20px;
-  width: 300px;
+  width: 50%;
   height:20px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -32,7 +32,7 @@ body{
 }
 #password {
   font-size: 20px;
-  width: 300px;
+  width: 50%;
   height:20px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -48,12 +48,12 @@ body{
   position:fixed;
   top: 50%;
   left: 50%;
-  width:30em;
+  width:21.05263157894737%;/*400px / 19900px*/
   height:18em;
   margin-top: -9em; /*set to a negative number 1/2 of your height*/
   margin-left: -15em; /*set to a negative number 1/2 of your width*/
   background-color : black;
-  width: 400px;
+
   height: 200px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;

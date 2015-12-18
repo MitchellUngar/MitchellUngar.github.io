@@ -47,7 +47,7 @@ loop the same video over and over.
   <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
   <!--Title of the page, TOP MIDDLE-->
   <!--<img src="Pictures/title.png" alt="title" height="125" width="600" id="title">-->
-      <input type='text' name='titleHeader' id="editTitleHeader"/>
+  <input type='text' name='titleHeader' id="editTitleHeader" placeholder="Enter Display Header"/>
 </div>
 <!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
   <!--Main div below top div-->
@@ -55,26 +55,13 @@ loop the same video over and over.
     <div id="left-container-2">
       <div id="notification-container" onloadeddata="enableDisable(this.checked)">
       <h2>Twitter</h2>
-      <h3>  <input type="checkbox" name="twitterSwitch" value="On" id="twitterSwitch"> Use Twitter as Notification</h3>
+      <h3>  <input type="checkbox" name="twitterSwitch" value="On" id="twitterSwitch" checked="checked"> Use Twitter as Notification</h3>
       <h2>Instagram</h2>
       <h3>  <input type="radio" name="radioInstagram" value="tile" id="twitterSwitch"> Tile Instagram Feed </br>
             <input type="radio" name="radioInstagram" value="slideshow" id="twitterSwitch"> Slideshow Instagram Feed</br>
             <input type="radio" name="radioInstagram" value="none" id="twitterSwitch" checked="checked" > No Instagram</h3>
-      <h2>Youtube Video 2</h2>
-      <h3>  <input type="radio" name="radioYoutube" value="yes" id="twitterSwitch" checked="checked">Yes </br>
-            <input type="radio" name="radioYoutube" value="no" id="twitterSwitch"> No<h3>
-      <h2>Enter Youtube Code</h2>
-      <input type='text' name='youtubeURL2' id="youtubeURL2"/></br>
-
       </div>
-    </div>
-<!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
-    <div id="edit-mid-container">
-      <!--Embed Text location-->
-      <p class="youtubeText">Type in Embed Youtube code from site Or leave blank for no video!</br>
-      <input type='text' name='youtubeURL' id="youtubeURL"/></br>
-        Handles 640 width and any height.</br>
-      <h3 class="youtubeText">rel=0&autoplay=1&loop=1&playlist=V3oJR5IAMxM</h3></p>
+      <h2>Video Examples</h2>
       <!--Example videos that could be put up-->
       <ul class="videoExample">
         <!--Motivational Example Div-->
@@ -100,6 +87,18 @@ loop the same video over and over.
         </div>
       </ul>
     </div>
+<!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+    <div id="edit-mid-container">
+      <!--Embed Text location-->
+      <h2>Use Youtube Video 1</h2>
+      <h3>  <input type="checkbox" name="youtube1Switch" value="yes" id="twitterSwitch"> Use Video 1</h3>
+      <h3 class="youtubeText">Video 1 Code for Video 1:</h3>
+      <input type='text' name='youtubeURL' id="youtubeURL" placeholder="Enter Video 1 Code"/>
+      <h2>Use Youtube Video 2</h2>
+      <h3>  <input type="checkbox" name="youtube2Switch" value="yes" id="twitterSwitch" checked="checked">Use Video 2</h3>
+      <h3 class="youtubeText">Video 2 Code for Video 2:</h3>
+      <input type='text' name='youtubeURL2' id="youtubeURL2" placeholder="Enter Video 2 Code"/></br>
+    </div>
 <!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
     <div id="right-container-2">
       <!--Event Area Name the event, then choose the date-->
@@ -107,32 +106,32 @@ loop the same video over and over.
           <!--Event 1-->
           <label class=editTitleText>Event 1:</label></br>
         </h3>
-          <p>Title:<input type='text' name='title' class='editTitle'/></br>
-          Date:<input type="text" id="datepicker" class='datepicker' name="datepicker" autocomplete="off" /></p>
+          <p>Title:<input type='text' name='title' class='editTitle' placeholder="Event 1 Title"/></br>
+          Date:<input type="text" id="datepicker" class='datepicker' name="datepicker" placeholder="Date 1" /></p>
         <h3>
           <!--Event 2-->
           <label class=editTitleText>Event 2:</label></br>
         </h3>
-    <p>Title:<input type='text' name='title2' class='editTitle'/></br>
-        Date:<input type="text" id="datepicker2" class='datepicker' name="datepicker2" autocomplete="off" /></p>
+    <p>Title:<input type='text' name='title2' class='editTitle' placeholder="Event 2 Title"/></br>
+        Date:<input type="text" id="datepicker2" class='datepicker' name="datepicker2" placeholder="Date 2" /></p>
         <h3>
           <!--Event 3-->
           <label class=editTitleText>Event 3:</label></br>
         </h3>
-    <p>Title:<input type='text' name='title3' class='editTitle'/></br>
-          Date:<input type="text" id="datepicker3" class='datepicker' name="datepicker3" autocomplete="off" /></p>
+    <p>Title:<input type='text' name='title3' class='editTitle' placeholder="Event 3 Title"/></br>
+          Date:<input type="text" id="datepicker3" class='datepicker' name="datepicker3" placeholder="Date 3" /></p>
           <h3>
             <!--Event 4-->
             <label class=editTitleText>Event 4:</label></br>
           </h3>
-    <p>Title:<input type='text' name='title4' class='editTitle'/></br>
-          Date:<input type="text" id="datepicker4" class='datepicker' name="datepicker4" autocomplete="off" /></p>
+    <p>Title:<input type='text' name='title4' class='editTitle' placeholder="Event 4 Title"/></br>
+          Date:<input type="text" id="datepicker4" class='datepicker' name="datepicker4" placeholder="Date 4" /></p>
           <h3>
             <!--Event 5-->
             <label class=editTitleText>Event 5:</label></br>
           </h3>
-    <p>Title:<input type='text' name='title5' class='editTitle'/></br>
-          Date:<input type="text" id="datepicker5" class='datepicker' name="datepicker5" autocomplete="off" /></p>
+    <p>Title:<input type='text' name='title5' class='editTitle' placeholder="Event 5 Title"/></br>
+          Date:<input type="text" id="datepicker5" class='datepicker' name="datepicker5" placeholder="Date 5"/></p>
           <input type='submit' id='submit' value='Submit'>
     </div>
   </div>
