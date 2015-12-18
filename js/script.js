@@ -195,11 +195,17 @@ function eventHandler() {
               setTimeout(switchDisp,20000);
             }
             if(qs("youtubeSlide") == "yes"){
-              ytSlideshow();
+              if(qs("youtubeURL2") == ""){
+                console.log("No second video code");
+                switchDisp();
+              }else{
+                ytSlideshow();
+              }
+
             }
             //Replaying the video at end of video
             if(qs("radioInstagram") == "none"){
-            ytSlideshow();
+            switchDisp();
             }
         }
     }
