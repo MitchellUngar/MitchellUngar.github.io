@@ -8,7 +8,7 @@ DATE: November 27 2015
 VERSION: 2.0.0
 */
 /*CSS Body*/
-#body {
+#htmltag, #body {
   overflow-x: hidden;
   overflow-y: hidden;
   width:100%;
