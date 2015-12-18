@@ -194,9 +194,12 @@ function eventHandler() {
               document.getElementById('vid-area').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=2&b=0&p=5&sb=off" allowtransparency="true" frameborder="0" scrolling="no" id="instagram-frame" style="border:none;overflow:hidden;width:615px; height: 410px" ></iframe> <!-- websta - websta.me -->';
               setTimeout(switchDisp,20000);
             }
+            if(qs("youtubeSlide") == "yes"){
+              ytSlideshow();
+            }
             //Replaying the video at end of video
             if(qs("radioInstagram") == "none"){
-            switchDisp();
+            ytSlideshow();
             }
         }
     }
@@ -204,7 +207,7 @@ function eventHandler() {
     function switchDisp(){
       //Create new video divs
       document.getElementById('vid-area').innerHTML = "";
-      document.getElementById('vid-area').innerHTML = "<div id='vid-box'>";
+      document.getElementById('vid-area').innerHTML = "<div id='vid-box'></div>";
       player = new YT.Player('vid-box', {
         height: '600',
         width: '640',
@@ -215,6 +218,7 @@ function eventHandler() {
         }
       });
     }
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var player2;
 var videos2 = qs("youtubeURL2");
@@ -239,8 +243,32 @@ function onPlayerStateChange2(event) {
     }
 }
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
+function ytSlideshow(){
+  //Create new video divs
+  document.getElementById('vid-area').innerHTML = "";
+  document.getElementById('vid-area').innerHTML = "<div id='vid-box'></div>";
+  player = new YT.Player('vid-box', {
+    height: '600',
+    width: '640',
+    videoId: videos2,
+    events: {
+      'onReady': onPlayerReady3,
+      'onStateChange': onPlayerStateChange3
+    }
+  });
+}
+// autoplay video
+function onPlayerReady3(event) {
+    event.target.playVideo();
+}
+function onPlayerStateChange3(event) {
+    if(event.data === 0) {
+      document.getElementById('vid-area').innerHTML = "";
+      document.getElementById('vid-area').innerHTML = "<div id='vid-box'></div>";
+      onYouTubePlayerAPIReady();
+    }
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   function notificationHandler() {
     //Creating a counter
     var ctr = 0;
